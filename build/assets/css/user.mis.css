@@ -1,0 +1,15 @@
+.navbar-brand {
+  padding-top: 0.355rem;
+  padding-bottom: 0.355rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  max-height: 50px; /* Adjust this value as needed */
+  width: auto;
+  display: block;
+}
