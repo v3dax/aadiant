@@ -1482,6 +1482,22 @@ html {
 	color: #4c57d6;
 }
 
+@media (max-width: 768px) {
+  .plan__text {
+    padding-left: 0;  /* remove left padding */
+    padding-right: 0; /* remove right padding for perfect centering */
+    text-align: center; /* center all content */
+  }
+
+  .plan__text .sec-btn {
+    display: inline-block;
+    margin: 20px auto 0;
+  }
+}
+
+
+
+
 /*---------------------
   Footer
 -----------------------*/
@@ -1682,6 +1698,60 @@ html {
 /* Optional: center the logo vertically/visually within the footer column */
 .footer__text-about .footer__logo {
   margin-bottom: 18px; /* reduce or increase for spacing control */
+}
+
+@media (max-width: 768px) {
+  /* Center the footer columns */
+  .footer__text-widget h5,
+  .footer__text-widget ul li,
+  .footer__widget-info li {
+    margin-left: 0;       /* remove left margin */
+    text-align: center;   /* center text */
+  }
+
+  /* Make icon and text inline-flex and center */
+  .footer__text-widget .footer__widget-info li {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* vertically align icon with text */
+    padding-left: 0;         /* remove previous padding */
+  }
+
+  .footer__text-widget .footer__widget-info li span {
+    position: static;       /* remove absolute positioning */
+    margin-right: 8px;      /* small gap between icon and text */
+    color: #4c57d6;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__top::before,
+  .footer__top::after {
+    width: 100%;      /* full width so no vertical split */
+    height: 100%;     /* keep full height */
+    top: 0;
+    left: 0;          /* align to top-left */
+  }
+
+  .footer__top::after {
+    display: none;    /* hide the second half pseudo-element to remove line */
+  }
+
+  .footer__top {
+    padding-bottom: 100px; /* reduce extra bottom padding for mobile */
+  }
+
+  /* Center content inside the columns */
+  .footer__top .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__top-call,
+  .footer__top-auth {
+    padding-left: 0;
+    margin-bottom: 50px;
+  }
 }
 
 
