@@ -424,12 +424,128 @@ ol {
     display: none;
 }
 
+/* Hide mobile nav and hamburger on desktop */
+@media (min-width: 992px) {
+    .mobile-nav {
+        display: none !important;
+    }
+
+    .hamburger {
+        display: none !important;
+    }
+}
+
+
 /* Responsive: Hide logo text on mobile */
 @media (max-width: 768px) {
     .header__logo-text .logo-text {
         display: none;
     }
 }
+
+@media (max-width: 768px) {
+    .header__logo-text a.logo-link {
+        margin-top: 0;        /* remove extra top margin */
+        justify-content: flex-start; /* align logo to left */
+    }
+
+    .header__menu ul li {
+        margin-top: 0;        /* remove extra top margin */
+    }
+}
+
+/* Flex alignment for hamburger on right */
+@media (max-width: 991px) {
+    .header__menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        height: 25px;
+        position: relative;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: #ffffff;
+        margin: 5px 0;
+        transition: 0.4s;
+        border-radius: 2px;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background: #0E0739;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+        padding-top: 60px;
+        transition: 0.4s;
+        z-index: 1000;
+
+		/* Center content */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers logo and links horizontally */
+    }
+
+    .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+    .mobile-nav ul li {
+    margin: 20px 0;
+}
+
+    .mobile-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .mobile-nav.open {
+        left: 0;
+    }
+}
+
+/* Logo inside mobile side nav */
+.mobile-nav-logo {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.mobile-nav-logo img {
+    height: 100px; /* Adjust size */
+    vertical-align: middle;
+}
+
+
 
 
 

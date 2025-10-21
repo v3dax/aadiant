@@ -16,33 +16,68 @@
 </head>
 
 <body>
-  <div id="preloder"><div class="loader"></div></div>
+  <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
 
   <!-- Header -->
   <header class="header-section">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-3 col-md-3">
-          <div class="header__logo-text">
-            <a href="./index.html" class="logo-link">
-              <img src="img/logo.png" alt="Logo" />
-              <span class="logo-text">diant</span>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-9 col-md-9">
-          <nav class="header__menu">
-            <ul>
-              <li class="active"><a href="./index.html">Home</a></li>
-              <li><a href="./about.html">About</a></li>
-              <li><a href="./contact.html">Contact</a></li>
-            </ul>
-          </nav>
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      
+      <!-- Logo (desktop) -->
+      <div class="col-auto">
+        <div class="header__logo-text">
+          <a href="./index.html" class="logo-link">
+            <img src="img/logo.png" alt="Logo" />
+            <span class="logo-text">diant</span>
+          </a>
         </div>
       </div>
-      <div class="canvas__open"><span class="fa fa-bars"></span></div>
+      
+      <!-- Navigation & Hamburger -->
+      <div class="col-auto d-flex align-items-center">
+        <!-- Desktop Menu -->
+        <nav class="header__menu">
+          <ul>
+            <li class="active"><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Hamburger Button (Mobile Only) -->
+        <div class="hamburger ml-3" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Mobile Side Navigation -->
+        <nav class="mobile-nav" id="mobile-nav">
+          <!-- Logo inside mobile nav -->
+          <div class="mobile-nav-logo">
+            <a href="./index.html">
+              <img src="img/logo.png" alt="Logo" />
+            </a>
+          </div>
+
+          <ul>
+            <li class="active"><a href="./index.html">Home</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
     </div>
-  </header>
+  </div>
+</header>
+
+
 
   <!-- Hero -->
   <section class="hero-section">
@@ -171,7 +206,7 @@
     <!-- Achievement Section End -->
 
 <!-- Work Section Begin -->
-<section class="work-section spad fade-up">
+<section class="work-section spad">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -315,6 +350,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="path/to/owl.text.animate.js"></script>
     <script src="js/main.js"></script>
+   <script>
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+
+// Toggle hamburger and menu
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileNav.classList.toggle('open');
+});
+
+// Close mobile nav when a link is clicked
+const mobileNavLinks = mobileNav.querySelectorAll('a');
+
+mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // Only close if the link points to a section on the same page
+        if (link.getAttribute('href').startsWith('#')) {
+            hamburger.classList.remove('active');
+            mobileNav.classList.remove('open');
+        }
+    });
+});
+</script>
+
     <script>
 document.addEventListener("DOMContentLoaded", function() {
     const fadeElements = document.querySelectorAll('.fade-up');
@@ -414,6 +473,8 @@ window.addEventListener('resize', setEqualCardHeights);
 });
 
 </script>
+
+
 
 </body>
 
