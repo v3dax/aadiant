@@ -1011,10 +1011,9 @@ ol {
 --------------------------------------*/
 
 .pricing-card-wrapper {
-  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch; /* stretch all cards to match tallest */
   gap: 40px;
   padding: 80px 20px;
   background: #fff;
@@ -1024,17 +1023,18 @@ ol {
 .pricing-card {
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(18, 8, 81, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   padding: 40px 30px;
   text-align: center;
   width: 320px;
-  min-height: 450px;
-  border-top: 5px solid transparent;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.3s ease;
-  z-index: 1;
+  justify-content: space-between; /* title at top, button at bottom */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  height: auto;
+  
+
 }
 
 /* Featured Pro card */
@@ -1042,8 +1042,12 @@ ol {
   background: #120851;
   color: #fff;
   min-height: 520px;
-  padding: 60px 30px;
+  padding: 40px 30px;
   z-index: 6;
+  border: 3px solid gold;
+  box-sizing: border-box;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pricing-card.featured .primary-btn {
@@ -1051,11 +1055,24 @@ ol {
   color: #120851;
 }
 
+.pricing-card.featured .primary-btn:hover {
+	border-color: gold;
+	background: #120851;
+	color: white;
+}
+
 /* Hover effects */
 .pricing-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 30px rgba(18, 8, 81, 0.25);
   border-top-color: #4c57d6;
+  z-index: 10;
+}
+
+.pricing-card.featured:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 100px rgba(255, 215, 0, 0.25); /* warmer + stronger shadow */
+  border-color: gold;
   z-index: 10;
 }
 
@@ -1081,8 +1098,9 @@ ol {
 }
 
 .pricing-card.featured h3.plan-price {
-  color: #fff;
+  color: gold;
 }
+
 
 .pricing-card p.plan-type {
   color: #888;
@@ -1100,7 +1118,7 @@ ol {
   margin: 0 0 25px;
   text-align: left;
   font-size: 15px;
-  flex-grow: 1;
+  flex-grow: 1; /* let features push button down */
 }
 
 .pricing-card ul li {
@@ -1171,7 +1189,7 @@ ol {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 40px; /* vertical space between text and cards */
+    gap: 10px; /* vertical space between text and cards */
     padding: 40px 20px; /* prevent edge-to-edge issues */
   }
 
@@ -1224,6 +1242,36 @@ ol {
     font-size: 24px;
   }
 }
+
+.fade-up-pricing-text {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up-pricing-text.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pricing cards animation */
+.pricing-card {
+  --hover-translate: 0px;
+  opacity: 0;
+  transform: translateY(calc(30px + var(--hover-translate)));
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.pricing-card.show {
+  opacity: 1;
+  transform: translateY(calc(0px + var(--hover-translate)));
+}
+
+.pricing-card:hover {
+  --hover-translate: -10px;
+}
+
+
 
 /*---------------------
   Achievement Section

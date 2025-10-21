@@ -112,24 +112,26 @@
       
       <!-- Left side: Title + Description -->
       <div class="register__text">
-        <div class="section-title fade-up">
-          <h3>Choose your plan!</h3>
-        </div>
-        <p class="fade-up">nicenudahygshvfsafgayufsvgtashfvastukfautasvaskgtfvusfgushasfsfsffsfsf</p>
-      </div>
+  <div class="section-title fade-up-pricing-text">
+    <h3>Choose your plan!</h3>
+  </div>
+  <p class="fade-up-pricing-text">Choose a plan which suits your requirements!</p>
+</div>
 
       <!-- Right side: Cards -->
       <div class="pricing-card-wrapper">
         <!-- Free Plan -->
         <div class="pricing-card stack-top">
+            
           <h4 class="plan-name">Free Plan</h4>
           <h3 class="plan-price">Free</h3>
           <p class="plan-type">One-time</p>
           <ul>
-            <li>✔ XLSX upload only</li>
-            <li>✔ 5,000 rows</li>
-            <li>✔ One-time dashboard</li>
-            <li>✔ Upgrade encouraged</li>
+            <li>XLSX upload only</li>
+            <li>5,000 rows</li>
+            <li>Basic Data Analytics</li>
+            <li>One-time dashboard</li>
+            <li>Email Support</li>
           </ul>
           <a href="#" class="primary-btn">Get Started</a>
         </div>
@@ -137,13 +139,16 @@
         <!-- Pro Plan -->
         <div class="pricing-card stack-top featured">
           <h4 class="plan-name">Pro Plan</h4>
-          <h3 class="plan-price">₹1,500<span style="font-size:14px;">/month</span></h3>
+          <h3 class="plan-price">₹1,500<span class="plan-price" style="font-size:14px;">/month</span></h3>
           <p class="plan-type">Subscription</p>
           <ul>
-            <li>✔ XLSX 50,000 + Google Sheets</li>
-            <li>✔ Real-time dashboards</li>
-            <li>✔ AI insights optional</li>
-            <li>✔ Razorpay manages subscriptions</li>
+            <li>Real-time Dashboard</li>
+            <li>Google Sheets Integration</li>
+            <li>XLSX - 50,000 rows (NOT RT)</li>
+            <li>Enhanced Data Analytics</li>
+            <li>AI insights (coming soon!)</li>
+            <li>Email + Whatsapp Support</li>
+            <li>Priority Support</li>
           </ul>
           <a href="#" class="primary-btn">Subscribe Now</a>
         </div>
@@ -330,6 +335,86 @@ document.addEventListener("DOMContentLoaded", function() {
     animateOnScroll(); // trigger on load if elements already visible
 });
 </script>
+<script>
+function setEqualCardHeights() {
+  const wrappers = document.querySelectorAll('.pricing-card-wrapper');
+
+  wrappers.forEach(wrapper => {
+    const cards = Array.from(wrapper.children);
+    let maxHeight = 0;
+
+    // Reset heights first so it recalculates properly
+    cards.forEach(card => card.style.height = 'auto');
+
+    // Find the tallest card in this wrapper
+    cards.forEach(card => {
+      const cardHeight = card.offsetHeight;
+      if (cardHeight > maxHeight) maxHeight = cardHeight;
+    });
+
+    // Set all cards to the tallest height
+    cards.forEach(card => card.style.height = maxHeight + 'px');
+  });
+}
+
+// Run when page loads
+window.addEventListener('load', setEqualCardHeights);
+
+// Run whenever window is resized
+window.addEventListener('resize', setEqualCardHeights);
+</script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const pricingText = document.querySelectorAll('.fade-up-pricing-text');
+
+    function animatePricingText() {
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        pricingText.forEach((el, index) => {
+            const rect = el.getBoundingClientRect();
+
+            // Trigger animation as soon as any part enters viewport
+            if (rect.top < windowHeight && rect.bottom > 0 && !el.classList.contains('show')) {
+                setTimeout(() => {
+                    el.classList.add('show');
+                }, index * 80); // stagger animation
+            }
+        });
+    }
+
+    window.addEventListener('scroll', animatePricingText);
+    window.addEventListener('resize', animatePricingText);
+    animatePricingText(); // trigger on load if already visible
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const pricingCards = document.querySelectorAll('.pricing-card');
+
+    function animatePricingCards() {
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        pricingCards.forEach((card, index) => {
+            const rect = card.getBoundingClientRect();
+
+            // Trigger animation slightly before the card fully enters the viewport
+            if (rect.top < windowHeight - 150 && !card.classList.contains('show')) {
+                setTimeout(() => {
+                    card.classList.add('show');
+                }, index * 200); // stagger the cards
+            }
+        });
+    }
+
+    window.addEventListener('scroll', animatePricingCards);
+    window.addEventListener('resize', animatePricingCards);
+    animatePricingCards(); // trigger on load if already visible
+});
+</script>
+
+
+
+
 </body>
 
 </html>
