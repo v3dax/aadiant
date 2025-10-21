@@ -363,8 +363,8 @@ window.addEventListener('load', setEqualCardHeights);
 // Run whenever window is resized
 window.addEventListener('resize', setEqualCardHeights);
 </script>
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
     const pricingText = document.querySelectorAll('.fade-up-pricing-text');
 
     function animatePricingText() {
@@ -373,8 +373,7 @@ document.addEventListener("DOMContentLoaded", function() {
         pricingText.forEach((el, index) => {
             const rect = el.getBoundingClientRect();
 
-            // Trigger animation as soon as any part enters viewport
-            if (rect.top < windowHeight && rect.bottom > 0 && !el.classList.contains('show')) {
+            if (rect.top < windowHeight && !el.classList.contains('show')) {
                 setTimeout(() => {
                     el.classList.add('show');
                 }, index * 80); // stagger animation
@@ -386,9 +385,10 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('resize', animatePricingText);
     animatePricingText(); // trigger on load if already visible
 });
+
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
     const pricingCards = document.querySelectorAll('.pricing-card');
 
     function animatePricingCards() {
@@ -397,23 +397,21 @@ document.addEventListener("DOMContentLoaded", function() {
         pricingCards.forEach((card, index) => {
             const rect = card.getBoundingClientRect();
 
-            // Trigger animation slightly before the card fully enters the viewport
             if (rect.top < windowHeight - 150 && !card.classList.contains('show')) {
+                const delay = card.classList.contains('featured') ? 100 : index * 200;
                 setTimeout(() => {
                     card.classList.add('show');
-                }, index * 200); // stagger the cards
+                }, delay);
             }
         });
     }
 
     window.addEventListener('scroll', animatePricingCards);
     window.addEventListener('resize', animatePricingCards);
-    animatePricingCards(); // trigger on load if already visible
+    animatePricingCards();
 });
+
 </script>
-
-
-
 
 </body>
 
