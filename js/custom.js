@@ -154,7 +154,7 @@ $(function() {
       transition: 'fade2',
       transitionDuration: 2000,
       slides: [
-        { src: "img/backgrounds/slide_1.jpg" },
+        { src: "img/backgrounds/ball.jpg" },
         { src: "img/backgrounds/slide_2.jpg" },
         { src: "img/backgrounds/slide_3.jpg" }
       ],
