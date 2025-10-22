@@ -1,486 +1,862 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aadiant — Clean, Summarize & Visualize Your Data</title>
-  <link rel="icon" type="image/png" href="img/logo.png" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
-  <link rel="stylesheet" href="css/flaticon.css" type="text/css" />
-  <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/style.css" type="text/css" />
-</head>
+<html lang="en" dir="ltr">
 
-<body>
-  <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
+  <head>
+    <meta charset="utf-8">
 
+    <!-- Page Title-->
+    <title>AADIANT</title>
 
-  <!-- Header -->
-  <header class="header-section">
-  <div class="container">
-    <div class="row align-items-center justify-content-between">
-      
-      <!-- Logo (desktop) -->
-      <div class="col-auto">
-        <div class="header__logo-text">
-          <a href="./index.html" class="logo-link">
-            <img src="img/logo.png" alt="Logo" />
-            <span class="logo-text">diant</span>
-          </a>
+    <!-- Meta Tags-->
+    <meta name="description" content="Ignite - functional and beautifully designed coming soon and landing page template to kick-start your project">
+    <meta name="keywords" content="ignite, coming soon, under construction, template, coming soon page, html5, css3, fashion, elegant">
+    <meta name="author" content="mix_design">
+
+    <!-- Viewport Meta-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Favicon & Icons Start -->
+    <link rel="icon" href="img/favicon/logo.svg" sizes="any">
+    <link rel="icon" href="img/favicon/logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/manifest.webmanifest">
+    <!-- Template Favicon & Icons End -->
+
+    <!-- Facebook Metadata Start -->
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:title" content="Ignite - Coming Soon and Landing Page Template">
+    <meta property="og:description" content="Ignite - functional and beautifully designed coming soon and landing page template to kick-start your project">
+    <meta property="og:url" content="http://mixdesign.club/themeforest/ignite/">
+    <meta property="og:image" content="http://mixdesign.club/themeforest/ignite/favicon/og-image.jpg">
+    <!-- Facebook Metadata End -->
+
+    <!-- Template Styles Start -->
+    <link rel="stylesheet" type="text/css" href="css/loaders/loader.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- Template Styles End -->
+
+    <!-- Custom Browser Color Start -->
+    <meta name="theme-color" content="#0c0c0c">
+    <meta name="msapplication-navbutton-color" content="#0c0c0c">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0c0c0c">
+    <!-- Custom Browser Color End -->
+  </head>
+
+  <body>
+
+    <!-- Loader Start -->
+    <div class="loader">
+      <div class="loader__content">
+        <div class="loader__logo">
+          <img src="img/logo.svg" alt="Ignite - Coming Soon and Landing Page Template">
         </div>
       </div>
-      
-      <!-- Navigation & Hamburger -->
-      <div class="col-auto d-flex align-items-center">
-        <!-- Desktop Menu -->
-        <nav class="header__menu">
-          <ul>
-            <li class="active"><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
+    </div>
+    <!-- Loader End -->
+
+    <!-- Navigation Start -->
+    <nav id="nav" class="nav">
+      <div class="nav__container">
+        <!-- menu background -->
+        <div class="nav__background"></div>
+        <div class="nav__content text-center">
+          <ul class="navigation">
+            <li>
+              <a id="home-trigger" class="nav__link" href="#0">
+                <span class="link-title">Home</span>
+                <span class="link-hover">Home</span>
+              </a>
+            </li>
+            <li>
+              <a id="about-trigger" class="nav__link" href="#0">
+                <span class="link-title">About Us</span>
+                <span class="link-hover">About Us</span>
+              </a>
+            </li>
+            <li>
+              <a id="works-trigger" class="nav__link" href="#0">
+                <span class="link-title">Projects</span>
+                <span class="link-hover">Projects</span>
+              </a>
+            </li>
+            <li>
+              <a id="contact-trigger" class="nav__link" href="#0">
+                <span class="link-title">Contact</span>
+                <span class="link-hover">Contact</span>
+              </a>
+            </li>
           </ul>
-        </nav>
-
-        <!-- Hamburger Button (Mobile Only) -->
-        <div class="hamburger ml-3" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
         </div>
+      </div>
+    </nav>
+    <!-- Navigation End -->
 
-        <!-- Mobile Side Navigation -->
-        <nav class="mobile-nav" id="mobile-nav">
-          <!-- Logo inside mobile nav -->
-          <div class="mobile-nav-logo">
-            <a href="./index.html">
-              <img src="img/logo.png" alt="Logo" />
+    <!-- Header Start -->
+    <header id="header" class="header split">
+      <div class="container-fluid px-0 fullheight-mobile">
+        <div class="row gx-0 fullheight-mobile">
+          <div class="col-6 fullheight-mobile header__left">
+
+            <!-- Logo Start -->
+            <div class="logo">
+              <a href="index.html">
+              <img src="img/logo.svg" alt="AADIANT">
+              </a>
+              <span class="logo-text">diant.</span>
+            </div>
+            <!-- Logo End -->
+
+          </div>
+          <div class="col-6 fullheight header__right">
+
+            <!-- Say Hello Button Start -->
+            <a href="#0" id="sayhello-trigger" class="btn btn-s sayhello-trigger">
+              <i class="fa-solid fa-pencil"></i>
+              <span class="title">Say Hello</span>
+              <span class="hover">Say Hello</span>
             </a>
+            <!-- Say Hello Button End -->
+
+            <!-- Menu Trigger Start -->
+            <div class="menu-button">
+              <a href="#0" id="menu-trigger" class="menu-trigger">
+                <span class="burger"></span>
+                <span class="circle"></span>
+              </a>
+            </div>
+            <!-- Menu Trigger End -->
+
           </div>
-
-          <ul>
-            <li class="active"><a href="./index.html">Home</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="/app/login" class="primary-btn header-login-btn">Sign In</a></li>
-          </ul>
-        </nav>
+        </div>
       </div>
+    </header>
+    <!-- Header End -->
 
-    </div>
-  </div>
-</header>
+    <!-- Main Section Start -->
+    <section id="main" class="main">
 
+      <!-- Main Section Content Start -->
+      <div class="main__content fullheight">
+        <div class="container-fluid px-0 fullheight">
+          <div class="row gx-0 fullheight">
 
+            <!-- Main Section Intro Start -->
+            <div class="col-12 col-xl-6 main__intro fullheight">
 
-  <!-- Hero -->
-  <section class="hero-section">
-    <div class="hero__slider">
-      <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="hero__text">
-                <h5>Upload • Clean • Visualize</h5>
-                <h2>Your Business Data, Simplified.</h2>
-                <a href="/app/login" class="primary-btn header-login-btn">Login</a>
-                <a href="/app/login" class="primary-btn header-signup-btn">Sign Up</a>
+              <!-- Intro Background Start -->
+              <div class="intro__background">
+                <!-- triangles background -->
+                <!--<div id="triangles-js"></div>-->
+              </div>
+              <!-- Intro Background End -->
+
+              <!-- Main Intro Content Start -->
+              <div class="intro__content fullheight">
+
+                <!-- Headline Start -->
+                <div id="headline" class="headline">
+                  <span class="headline__subtitle animated-headline">
+                    <span id="typed-strings">
+                      <b>Unlock hidden insights.</b>
+                      <b>Discover what your data knows.</b>
+                      <b>Transform numbers into opportunities.</b>
+                    </span>
+                    <span id="typed"></span>
+                  </span>
+                  <h1 class="headline__title">Your data’s secrets, arriving shortly.</h1>
+                  <div class="headline__btnholder">
+                    <a href="https://vimeo.com/65036292" id="showreel-trigger" class="btn btn-l-icon btn-light">
+                      <span class="btn-icon-title">Play Showreel</span>
+                      <span class="btn-icon-anim"><i class="fa-solid fa-play"></i></span>
+                    </a>
+                    <a href="#" id="notify-trigger" class="btn btn-l btn-outline-light">
+                      <span class="btn-title">Notify me</span>
+                      <span class="btn-hover">Notify me</span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Headline End -->
+
+              </div>
+              <!-- Main Intro Content End -->
+
+              <!-- Footer Mobile Start -->
+              <div class="footer-mobile split">
+                <div class="container-mobile fullheight-mobile d-flex align-items-center">
+                  <div class="container-fluid px-0">
+                    <div class="row gx-0">
+                      <div class="col-6 text-start footer-mobile__socials">
+                        <!-- intro socials links -->
+                        <ul class="socials d-flex align-items-start">
+                          <li>
+                            <a class="btn btn-s-text" href="https://www.facebook.com/" target="_blank">
+                              <span class="title">Fb</span>
+                              <span class="hover">Fb</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="btn btn-s-text" href="https://www.instagram.com/v3dax" target="_blank">
+                              <span class="title">In</span>
+                              <span class="hover">In</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="btn btn-s-text" href="https://twitter.com/" target="_blank">
+                              <span class="title">Tw</span>
+                              <span class="hover">Tw</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="btn btn-s-text" href="https://www.behance.net/" target="_blank">
+                              <span class="title">Be</span>
+                              <span class="hover">Be</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-6 text-end footer-mobile__copyright">
+                        <!-- intro copyright link -->
+                        <p class="copyright">
+                          <i class="fa-regular fa-copyright"></i>
+                          <a target="_blank">AADIANT</a>,
+                          2025
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Footer Mobile End -->
+
+            </div>
+            <!-- Main Section Intro End -->
+
+            <!-- Main Section Media Start -->
+            <div class="col-12 col-xl-6 main__media fullheight">
+              <div class="media__content">
+                <!-- kenburns background -->
+                <div id="bgndKenburns"></div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="hero__img">
-                <img src="img/hero/hero-right.png" alt="" />
-              </div>
-            </div>
+            <!-- Main Section Media End -->
+
           </div>
         </div>
       </div>
-    </div>
-  </section>
+      <!-- Main Section Content End -->
 
-  <!-- Intro -->
-  <section class="register-domain spad">
-    <div class="container">
-      <div class="row d-flex justify-content-center">
-        <div class="col-lg-8">
-          <div class="register-domain-text">
-            <div class="section-title fade-up">
-              <h3>Transform Your Spreadsheets into Actionable Insights.</h3>
-            </div>
-            <p class="fade-up">
-              Aadiant helps small and micro businesses clean, summarize, and visualize their data with zero setup. 
-              Upload an Excel file or connect your Google Sheet — we’ll handle the rest. 
-              From data cleaning to dashboards, everything runs in one simple platform.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features -->
-  <section class="services-section spad">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12"><div class="section-title fade-up"><h3>What You Can Do with Aadiant</h3></div></div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-6"><div class="services__item fade-up"><h5>Upload & Clean Data</h5><p>Upload your Excel file — Aadiant detects and fixes missing or invalid entries instantly.</p></div></div>
-        <div class="col-lg-4 col-md-4 col-sm-6"><div class="services__item fade-up"><h5>Generate Instant Reports</h5><p>Get auto-generated summaries, stats, and visuals for your data without writing a single formula.</p></div></div>
-        <div class="col-lg-4 col-md-4 col-sm-6"><div class="services__item fade-up"><h5>Create Interactive Dashboards</h5><p>Visualize your key metrics with a clean dashboard built using Google Looker Studio.</p></div></div>
-        <div class="col-lg-4 col-md-4 col-sm-6"><div class="services__item fade-up"><h5>Google Sheets Integration</h5><p>Connect live Sheets for automatic updates and real-time dashboards (Pro users).</p></div></div>
-        <div class="col-lg-4 col-md-4 col-sm-6"><div class="services__item fade-up"><h5>AI-Powered Summaries</h5><p>Use built-in AI tools to summarize trends, detect anomalies, and make smarter business decisions.</p></div></div>
-        <div class="col-lg-4 col-md-4 col-sm-6"><div class="services__item fade-up"><h5>Secure & Private</h5><p>Your data is encrypted end-to-end. We never share, store, or reuse your data beyond your control.</p></div></div>
-      </div>
-    </div>
-  </section>
-    <!-- Services Section End -->
-<!-- Pricing Section -->
-<section id="pricing" class="register-domain spad">
-  <div class="container">
-    <div class="pricing-flex">
-      
-      <!-- Left side: Title + Description -->
-      <div class="register__text">
-  <div class="section-title fade-up-pricing-text">
-    <h3>Choose your plan!</h3>
-  </div>
-  <div class="section-title fade-up-pricing-text">
-  <p>Choose a plan which suits your requirements!</p>
-</div>
-</div>
-
-      <!-- Right side: Cards -->
-      <div class="pricing-card-wrapper">
-        <!-- Free Plan -->
-        <div class="pricing-card stack-top">
-            
-          <h4 class="plan-name">Free Plan</h4>
-          <h3 class="plan-price">Free</h3>
-          <p class="plan-type">One-time</p>
-          <ul>
-            <li>XLSX upload only</li>
-            <li>5,000 rows</li>
-            <li>Basic Data Analytics</li>
-            <li>One-time dashboard</li>
-            <li>Email Support</li>
-          </ul>
-          <a href="#" class="primary-btn">Get Started</a>
-        </div>
-
-        <!-- Pro Plan -->
-        <div class="pricing-card stack-top featured">
-          <h4 class="plan-name">Pro Plan</h4>
-          <h3 class="plan-price">₹1,500<span class="plan-price" style="font-size:14px;">/month</span></h3>
-          <p class="plan-type">Subscription</p>
-          <ul>
-            <li>Real-time Dashboard</li>
-            <li>Google Sheets Integration</li>
-            <li>XLSX - 50,000 rows (NOT RT)</li>
-            <li>Enhanced Data Analytics</li>
-            <li>AI insights (coming soon!)</li>
-            <li>Email + Whatsapp Support</li>
-            <li>Priority Support</li>
-          </ul>
-          <a href="#" class="primary-btn">Subscribe Now</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Pricing Section End -->
-
-
-
-
-    <!-- Pricing Section End -->
-
-    <!-- Achievement Section Begin -->
-    <section class="achievement-section set-bg spad" data-setbg="img/achievement-bg.jpg">
     </section>
-    <!-- Achievement Section End -->
+    <!-- Main Section End -->
 
-<!-- Work Section Begin -->
-<section class="work-section spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <h3>TURN YOUR DATA INTO INSIGHTS IN MINUTES</h3>
+    <!-- About Section Start -->
+    <section id="about" class="inner about">
+      
+      <!-- Inner Section Content Start -->
+      <div class="inner__content fullheight">
+        <div class="container-fluid px-0 fullheight">
+          <div class="row gx-0 flex-xl-row-reverse fullheight">
+
+            <!-- Inner Section Info Part Start -->
+            <div class="col-12 col-xl-6 inner__info">
+              <div class="blocks-container">
+
+                <!-- Inner Content Block Title Start -->
+                <div class="content-block">
+                  <span class="block__subtitle">01 / About Us</span>
+                  <h2 class="block__title">Creativity is above all. Just awesome template.</h2>
+                  <p class="block__text">I wonder if I've been changed in the night? <a href="#0" class="text-link">Let me think.</a> Was I the same when I got up this morning?
+                    I almost think I can remember feeling a little different. 
+                    But if I'm not the same, the next question is 'Who in the world am I?' Ah, that's the great puzzle!
+                  </p>
                 </div>
-                <div class="work__text">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="work__item">
-                                <i class="fa fa-file-excel-o"></i>
-                                <span>UPLOAD XLSX FILES EASILY</span>
-                                <h3>QUICK DATA IMPORT</h3>
-                                <p>Upload your Excel files and instantly generate interactive dashboards. Free users can analyze up to 5,000 rows at a time, while Pro users enjoy up to 50,000 rows and unlimited updates via Google Sheets.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="work__item">
-                                <i class="fa fa-line-chart"></i>
-                                <span>REAL-TIME DASHBOARDS & INSIGHTS</span>
-                                <h3>VISUALIZE & TRACK</h3>
-                                <p>Connect Google Sheets, track your data in real time, and unlock AI-powered insights. Pro users can schedule automated updates and monitor trends instantly, while free users get a one-time dashboard for quick analysis.</p>
-                            </div>
-                        </div>
+                <!-- Inner Content Block Title End -->
+
+                <!-- Inner Content Block Skillbars Start -->
+                <div class="content-block">
+                  <div class="skillbars">
+                    <!-- Skillbar single item -->
+                    <div class="show-skillbar">
+                      <div class="skillbar light" data-percent="96">
+                        <span class="skillbar-title light">UI/UX Design</span>
+                        <p class="skillbar-bar light" style="width: 96%;"></p>
+                        <span class="skill-bar-percent light">96%</span>
+                      </div>
                     </div>
-                    <!-- Single centered button -->
-                    <div class="work__button text-center" style="margin-top: 40px;">
-                        <a href="#pricing" class="sec-btn">CHOOSE YOUR PLAN NOW!</a>
+                    <!-- Skillbar single item -->
+                    <div class="show-skillbar">
+                      <div class="skillbar light" data-percent="84">
+                        <span class="skillbar-title light">Branding</span>
+                        <p class="skillbar-bar light" style="width: 84%;"></p>
+                        <span class="skill-bar-percent light">90%</span>
+                      </div>
                     </div>
+                    <!-- Skillbar single item -->
+                    <div class="show-skillbar">
+                      <div class="skillbar light" data-percent="90">
+                        <span class="skillbar-title light">3D Modeling</span>
+                        <p class="skillbar-bar light" style="width: 90%;"></p>
+                        <span class="skill-bar-percent light">87%</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <!-- Inner Content Block Skillbars End -->
+
+              </div>
             </div>
-        </div>
-    </div>
-</section>
-<!-- Work Section End -->
+            <!-- Inner Section Info Part End -->
 
+            <!-- Inner Section Media Part Start -->
+            <div class="col-12 col-xl-6 inner__media">
+              <div class="media-container">
 
-
-    <!-- Work Section End -->
-
-    <!-- Choose Plan Section Begin -->
-<section class="choose-plan-section spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <div class="hero__img">
-                <img src="img/choose-plan.png" alt="Choose Plan Illustration">
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="plan__text">
-                    <h3>Choose the plan that fits your data needs!</h3>
-                    <ul>
-                        <li><span class="fa fa-check"></span> Free Plan: Upload XLSX up to 5,000 rows</li>
-                        <li><span class="fa fa-check"></span> Pro Plan: ₹1,500/month – XLSX up to 50,000 rows + Google Sheets integration</li>
-                        <li><span class="fa fa-check"></span> Real-time dashboards via Looker Studio (Pro only)</li>
-                        <li><span class="fa fa-check"></span> AI insights for smarter analytics (Coming soon for pro plan!)</li>
-                        <li><span class="fa fa-check"></span> Secure authentication & encrypted data</li>
-                        <li><span class="fa fa-check"></span> Priority support for Pro users</li>
-                    </ul>
-                    <a href="#pricing" class="sec-btn">Start Free / Go Pro</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Choose Plan Section End -->
-
-
-    <!-- Footer Section Begin -->
-    <footer class="footer-section">
-        <div class="footer__top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="footer__top-call">
-                            <h5>Need Help? Call us</h5>
-                            <h2>+91 8797721054</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="footer__top-auth">
-                            <h5>Join And Grow Your Business Now!</h5>
-                            <a href="#" class="primary-btn">Log in</a>
-                            <a href="#" class="primary-btn sign-up">Sign Up</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer__text set-bg" data-setbg="img/footer-bg.png">
-            <div class="container">
-                <div class="row footer-main-row">
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="footer__text-about">
-                            <div class="footer__logo">
-                                <a href="./index.html"><img src="img/logo.png" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-6">
-                        <div class="footer__text-widget">
-                            <h5>Company</h5>
-                            <ul>
-                                <li><a href="#">Company</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Careers</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-6">
-                        <div class="footer__text-widget">
-                            <h5>Socials</h5>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-twitter"></i>X (Twitter)</a></li>
-                                <li><a href="#"><i class="fa fa-youtube-play"></i>Youtube</a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="footer__text-widget">
-                            <h5>cONTACT US</h5>
-                            <ul class="footer__widget-info">
-                                <li><span class="fa fa-mobile"></span> +91 8797721054</li>
-                                <li><span class="fa fa-headphones"></span> aadiantds@gmail.com</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__text-copyright">
+                <!-- Inner Illustration Image Start -->
+                <div class="image about-image">
+                  <!--<div class="color-layer color-layer-dark"></div>-->
+                  <!-- About image bottom caption -->
+                  <div class="image-caption opposite">
                     <p>
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+                      Lost in Space
+                      <span>Editorial / Render</span>
+                    </p>
+                  </div>
                 </div>
+                <!-- Inner Illustration Image End -->
+                
+              </div>
             </div>
+            <!-- Inner Section Media Part End -->
+
+          </div>
         </div>
+      </div>
+      <!-- Inner Section Content End -->
+
+    </section>
+    <!-- About Section End -->
+
+    <!-- Works Section Start -->
+    <section id="works" class="inner works">
+
+      <!-- Inner Section Content Start -->
+      <div class="inner__content fullheight">
+        <div class="container-fluid px-0 fullheight">
+          <div class="row gx-0 flex-xl-row-reverse fullheight">
+
+            <!-- Inner Section Info Part Start -->
+            <div class="col-12 col-xl-6 inner__info">
+              <div class="blocks-container">
+
+                <!-- Inner Content Block Title Start -->
+                <div class="content-block">
+                  <span class="block__subtitle">02 / Projects</span>
+                  <h2 class="block__title">We are creating unique staff. Meet our featured projects.</h2>
+                  <p class="block__text">Be what you would seem to be – or, if you’d like it put more simply – never <a href="#0" class="text-link">imagine yourself</a> not to be otherwise than 
+                    what it might appear to others that what you were or might have been was not otherwise than what you had been would have appeared to them to be otherwise.
+                  </p>
+                </div>
+                <!-- Inner Content Block Title End -->
+
+                <!-- Inner Content Block Features Start -->
+                <div class="content-block">
+                  <div class="container-fluid px-0">
+                    <div class="row gx-5">
+                      <!-- Feature single item -->
+                      <div class="col-12 col-sm-6 d-flex justify-content-start align-items-center features__item">
+                        <img src="https://dummyimage.com/50x46/4d4d4d/636363" alt="Ignite Template Feature">
+                        <h3>Eye catching<br>design</h3>
+                      </div>
+                      <!-- Feature single item -->
+                      <div class="col-12 col-sm-6 d-flex justify-content-start align-items-center features__item">
+                        <img src="https://dummyimage.com/50x46/4d4d4d/636363" alt="Ignite Template Feature">
+                        <h3>Trendy colors<br>and fonts</h3>
+                      </div>
+                      <!-- Feature single item -->
+                      <div class="col-12 col-sm-6 d-flex justify-content-start align-items-center features__item">
+                        <img src="https://dummyimage.com/50x46/4d4d4d/636363" alt="Ignite Template Feature">
+                        <h3>Smooth section<br>transitions</h3>
+                      </div>
+                      <!-- Feature single item -->
+                      <div class="col-12 col-sm-6 d-flex justify-content-start align-items-center features__item">
+                        <img src="https://dummyimage.com/50x46/4d4d4d/636363" alt="Ignite Template Feature">
+                        <h3>Ready-to-use<br>contact form</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Inner Content Block Features End -->
+
+              </div>
+            </div>
+            <!-- Inner Section Info Part End -->
+
+            <!-- Inner Section Media Part Start -->
+            <div class="col-12 col-xl-6 inner__media">
+              <div class="media-container portfolio-container">
+
+                <div class="container-fluid px-0 inner__gallery">
+                  <div class="row gx-0 my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+                    <!-- Works Gallery Single Item Start -->
+                    <figure class="col-12 col-sm-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                      <a href="img/backgrounds/prism.jpg" data-image="img/backgrounds/prism.jpg" class="my-gallery__link" itemprop="contentUrl" data-size="4096x4096">
+                        <img src="img/backgrounds/prism.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Image description">
+                      </a>
+                      <figcaption class="my-gallery__description" itemprop="caption description">
+                        <h4>Glossy Wave
+                          <small>Editorial / Render</small>
+                        </h4>
+                        <p>Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
+                          a mollis ipsum tristique eu.
+                        </p>
+                      </figcaption>
+                    </figure>
+                    <!-- Works Gallery Single Item End -->
+
+                    <!-- Works Gallery Single Item Start -->
+                    <figure class="col-12 col-sm-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                      <a href="img/backgrounds/strip.jpg" data-image="img/backgrounds/strip.jpg" class="my-gallery__link" itemprop="contentUrl" data-size="2537x2537">
+                        <img src="img/backgrounds/strip.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Image description">
+                      </a>
+                      <figcaption class="my-gallery__description opposite" itemprop="caption description">
+                        <h4 class="opposite">Alien Sphere
+                          <small>Projects / Illustration</small>
+                        </h4>
+                        <p>Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
+                          a mollis ipsum tristique eu.
+                        </p>
+                      </figcaption>
+                    </figure>
+                    <!-- Works Gallery Single Item End -->
+
+                    <!-- Works Gallery Single Item Start -->
+                    <figure class="col-12 col-sm-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                      <a href="img/backgrounds/pattern.jpg" data-image="img/backgrounds/pattern.jpg" class="my-gallery__link" itemprop="contentUrl" data-size="7595x5077">
+                        <img src="img/backgrounds/pattern.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Image description">
+                      </a>
+                      <figcaption class="my-gallery__description opposite" itemprop="caption description">
+                        <h4 class="opposite">Random Blocks
+                          <small>Editorial / Render</small>
+                        </h4>
+                        <p>Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
+                          a mollis ipsum tristique eu.
+                        </p>
+                      </figcaption>
+                    </figure>
+                    <!-- Works Gallery Single Item End -->
+
+                    <!-- Works Gallery Single Item Start -->
+                    <figure class="col-12 col-sm-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                      <a href="img/backgrounds/ball.jpg" data-image="img/backgrounds/ball.jpg" class="my-gallery__link" itemprop="contentUrl" data-size="2646x2466">
+                        <img src="img/backgrounds/ball.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Image description">
+                      </a>
+                      <figcaption class="my-gallery__description " itemprop="caption description">
+                        <h4>Cute Robot
+                          <small>Projects / Photography</small>
+                        </h4>
+                        <p>Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
+                          a mollis ipsum tristique eu.
+                        </p>
+                      </figcaption>
+                    </figure>
+                    <!-- Works Gallery Single Item End -->
+
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <!-- Inner Section Media Part End -->
+
+          </div>
+        </div>
+      </div>
+      <!-- Inner Section Content End -->
+
+    </section>
+    <!-- Works Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="inner contact">
+
+      <!-- Inner Section Content Start -->
+      <div class="inner__content fullheight">
+        <div class="container-fluid px-0 fullheight">
+          <div class="row gx-0 flex-xl-row-reverse fullheight">
+
+            <!-- Inner Section Info Part Start -->
+            <div class="col-12 col-xl-6 inner__info">
+              <div class="blocks-container">
+
+                <!-- Inner Content Block Title Start -->
+                <div class="content-block">
+                  <span class="block__subtitle">03 / Contact</span>
+                  <h2 class="block__title">Let's get in touch. Welcome to the new office.</h2>
+                  <p class="block__text">Our website is under construction but we are ready to go! You can <a href="tel:+12127089400" class="text-link">call us</a> or leave a request here. 
+                    We are always glad to see you in our office from <span>9:00</span> to <span>18:00</span>.
+                  </p>
+                </div>
+                <!-- Inner Content Block Title End -->
+
+                <!-- Inner Content Block Skillbars Start -->
+                <div class="content-block">
+                  <div class="container-fluid px-0">
+                    <div class="row gx-5">
+                      <!-- contact data item -->
+                      <div class="col-12 col-md-4 contactdata__item">
+                        <h5 class="contactdata__title">Location</h5>
+                        <div class="contactdata__descr d-flex align-items-start">
+                          <div class="contactdata__icon">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                          </div>
+                          <div class="contactdata__text">
+                            <p><a class="contact-link" href="https://goo.gl/maps/nWXKpGaDPuyH6gxRA" target="_blank">11 West 53 Street,<br>New York, NY 10019</a></p>
+                          </div>
+                        </div>
+                        <div class="contactdata__descr d-flex align-items-start">
+                          <div class="contactdata__icon">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                          </div>
+                          <div class="contactdata__text">
+                            <p><a class="contact-link" href="https://goo.gl/maps/xap5o3MZBuC6DFHz8" target="_blank">3400 Broadway,<br>Oakland, CA 94611</a></p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- contact data item -->
+                      <div class="col-12 col-md-4 contactdata__item">
+                        <h5 class="contactdata__title">Contact</h5>
+                        <div class="contactdata__descr d-flex align-items-start">
+                          <div class="contactdata__icon">
+                            <i class="fa-solid fa-phone"></i>
+                          </div>
+                          <div class="contactdata__text">
+                            <p>
+                              <a class="contact-link" href="tel:+12127089400">+1 212-708-9400</a>
+                              <br>
+                              <a class="contact-link" href="tel:+15104570211">+1 510-457-0211</a>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="contactdata__descr d-flex align-items-start">
+                          <div class="contactdata__icon">
+                            <i class="fa-solid fa-envelope"></i>
+                          </div>
+                          <div class="contactdata__text">
+                            <a class="contact-link" href="mailto:example@example.com?subject=Message%20from%20your%20site">hello@ignite.com</a>
+                            <br>
+                            <a class="contact-link" href="mailto:example@example.com?subject=Message%20from%20your%20site">help@ignite.com</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- contact data item -->
+                      <div class="col-12 col-md-4 contactdata__item">
+                        <h5 class="contactdata__title">Follow us</h5>
+                        <div class="contactdata__descr d-flex align-items-start">
+                          <ul class="contactdata__socials">
+                            <li>
+                              <i class="fa-brands fa-facebook"></i>
+                              <a class="contact-link" href="https://www.facebook.com/" target="_blank">Facebook</a>
+                            </li>
+                            <li>
+                              <i class="fa-brands fa-instagram"></i>
+                              <a class="contact-link" href="https://www.instagram.com/" target="_blank">Instagram</a>
+                            </li>
+                            <li>
+                              <i class="fa-brands fa-twitter"></i>
+                              <a class="contact-link" href="https://twitter.com/" target="_blank">Twitter</a>
+                            </li>
+                            <li>
+                              <i class="fa-brands fa-pinterest"></i>
+                              <a class="contact-link" href="https://pinterest.com/" target="_blank">Pinterest</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Inner Content Block Skillbars End -->
+
+              </div>
+            </div>
+            <!-- Inner Section Info Part End -->
+
+            <!-- Inner Section Media Part Start -->
+            <div class="col-12 col-xl-6 inner__media">
+              <div class="media-container">
+
+                <!-- Inner Illustration Image Start -->
+                <div class="image contact-image">
+                  <!--<div class="color-layer color-layer-dark"></div>-->
+                  <!-- contact image bottom caption -->
+                  <div class="image-caption">
+                    <p>
+                      Imagination Flight
+                      <span>Editorial / Render</span>
+                    </p>
+                  </div>
+                </div>
+                <!-- Inner Illustration Image End -->
+                
+              </div>
+            </div>
+            <!-- Inner Section Media Part End -->
+
+          </div>
+        </div>
+      </div>
+      <!-- Inner Section Content End -->
+
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Desktop Start -->
+    <footer id="footer" class="footer-desktop split">
+      <div class="container-fluid px-0 fullheight">
+        <div class="row gx-0 fullheight">
+          <div class="col-6 footer-desktop__left fullheight">
+            <div class="container-desktop d-flex fullheight justify-content-start align-items-center">
+              <!-- Home screen socials links -->
+              <ul class="socials">
+                <li>
+                  <a class="btn btn-s-text" href="https://www.facebook.com/" target="_blank">
+                    <span class="title">Fb</span>
+                    <span class="hover">Fb</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn btn-s-text" href="https://www.instagram.com" target="_blank">
+                    <span class="title">In</span>
+                    <span class="hover">In</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn btn-s-text" href="https://twitter.com/" target="_blank">
+                    <span class="title">Tw</span>
+                    <span class="hover">Tw</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn btn-s-text" href="https://www.behance.net/" target="_blank">
+                    <span class="title">Be</span>
+                    <span class="hover">Be</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6 footer-desktop__right fullheight">
+            <div class="container-desktop fullheight d-flex justify-content-end align-items-center">
+              <p class="copyright bright">
+                <i class="fa-regular fa-copyright"></i>
+                <a class="contact-link" href="https://themeforest.net/user/mix_design" target="_blank">AADIANT</a>,
+                2025
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-    <!-- Footer Section End -->
+    <!-- Footer Desktop End -->
 
-    <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="path/to/owl.text.animate.js"></script>
-    <script src="js/main.js"></script>
-   <script>
-const hamburger = document.getElementById('hamburger');
-const mobileNav = document.getElementById('mobile-nav');
+    <!-- Notify Popup Start -->
+    <div id="notify" class="popup notify">
+      <div class="popup__container">
 
-// Toggle hamburger and menu
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    mobileNav.classList.toggle('open');
-});
+        <!-- Popup Content Start -->
+        <div class="popup__content block-rounded-s">
 
-// Close mobile nav when a link is clicked
-const mobileNavLinks = mobileNav.querySelectorAll('a');
+          <!-- popup close button -->
+          <a href="#0" id="notify-close" class="popup-close">
+            <i class="fa-solid fa-xmark"></i>
+          </a>
 
-mobileNavLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        // Only close if the link points to a section on the same page
-        if (link.getAttribute('href').startsWith('#')) {
-            hamburger.classList.remove('active');
-            mobileNav.classList.remove('open');
-        }
-    });
-});
-</script>
+          <!-- Notify Popup Title Start -->
+          <div class="popup-title">
+            <p class="popup-title__title">Get to know about our launch</p>
+            <p class="popup-title__text">Subscribe to our newsletter and we will send you a notification about the launch of our brand new site</p>
+          </div>
+          <!-- Notify Popup Title End -->
 
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const fadeElements = document.querySelectorAll('.fade-up');
+          <!-- Notify Form Container Start -->
+          <div class="form-container">
 
-    function animateOnScroll() {
-        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            <!-- Reply Messages Start-->
+            <div class="reply-group subscription-ok">
+              <i class="fa-solid fa-circle-check reply-group__icon"></i>
+              <p class="reply-group__title txt-light">Done!</p>
+              <span class="reply-group__text">Thanks for subscribing. We will send you a notification about our launch.</span>
+            </div>
+            <div class="reply-group subscription-error">
+              <i class="fa-solid fa-face-frown-open reply-group__icon"></i>
+              <p class="reply-group__title">Ooops!</p>
+              <span class="reply-group__text">Something went wrong. Please try again later.</span>
+            </div>
+            <!-- Reply Messages End-->
 
-        fadeElements.forEach((el, index) => {
-            const rect = el.getBoundingClientRect();
+            <!-- Notify Contact Form Start-->
+            <form class="form notify-form form-light">
+              <input class="margin-l" type="email" placeholder="Your Email" required>
+              <button class="btn btn-l btn-light" type="submit">
+                <span class="btn-title">Submit</span>
+                <span class="btn-hover">Submit</span>
+              </button>
+            </form>
+            <!-- Notify Contact Form End-->
 
-            // If element is visible and not yet animated
-            if (rect.top < windowHeight && rect.bottom > 0 && !el.classList.contains('show')) {
-                setTimeout(() => {
-                    el.classList.add('show');
-                }, index * 60); // stagger all elements in order
-            }
-        });
-    }
+          </div>
+          <!-- Notify Form Container End -->
 
-    window.addEventListener('scroll', animateOnScroll);
-    window.addEventListener('resize', animateOnScroll);
-    animateOnScroll(); // trigger on load if elements already visible
-});
-</script>
-<script>
-function setEqualCardHeights() {
-  const wrappers = document.querySelectorAll('.pricing-card-wrapper');
+        </div>
+        <!-- Popup Content End -->
 
-  wrappers.forEach(wrapper => {
-    const cards = Array.from(wrapper.children);
-    let maxHeight = 0;
+      </div>
+    </div>
+    <!-- Notify Popup End -->
 
-    // Reset heights first so it recalculates properly
-    cards.forEach(card => card.style.height = 'auto');
+    <!-- Say Hello Popup Start -->
+    <div id="sayhello" class="popup sayhello">
+      <div class="popup__container">
 
-    // Find the tallest card in this wrapper
-    cards.forEach(card => {
-      const cardHeight = card.offsetHeight;
-      if (cardHeight > maxHeight) maxHeight = cardHeight;
-    });
+        <!-- Popup Content Start -->
+        <div class="popup__content block-rounded-s">
 
-    // Set all cards to the tallest height
-    cards.forEach(card => card.style.height = maxHeight + 'px');
-  });
-}
+          <!-- popup close button -->
+          <a href="#0" id="sayhello-close" class="popup-close">
+            <i class="fa-solid fa-xmark"></i>
+          </a>
 
-// Run when page loads
-window.addEventListener('load', setEqualCardHeights);
+          <!-- Say Hello Popup Title Start -->
+          <div class="popup-title">
+            <p class="popup-title__title">Let's talk!</p>
+          </div>
+          <!-- Say Hello Popup Title End -->
 
-// Run whenever window is resized
-window.addEventListener('resize', setEqualCardHeights);
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-    const pricingText = document.querySelectorAll('.fade-up-pricing-text');
+          <!-- Say Hello Form Container Start -->
+          <div class="form-container">
 
-    function animatePricingText() {
-        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            <!-- Reply Messages Start-->
+            <div class="reply-group">
+              <i class="fa-solid fa-circle-check reply-group__icon"></i>
+              <p class="reply-group__title">Done!</p>
+              <span class="reply-group__text">Thanks for your message. We will get back as soon as possible</span>
+            </div>
+            <!-- Reply Messages End-->
 
-        pricingText.forEach((el, index) => {
-            const rect = el.getBoundingClientRect();
+            <!-- Contact Form Start -->
+            <form class="form form-light sayhello-form" id="sayhello-form">
+              <!-- Hidden Required Fields -->
+              <input type="hidden" name="project_name" value="Ignite - Coming Soon and Landing Page Template">
+              <input type="hidden" name="admin_email" value="support@mixdesign.club">
+              <input type="hidden" name="form_subject" value="Contact Form Message">
+              <!-- END Hidden Required Fields-->
+              <div class="container-fluid px-0">
+                <div class="row gx-5">
+                  <div class="col-12 col-md-6">
+                    <input class="" type="text" name="Name" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <input class="" type="text" name="Company" placeholder="Your Email" required>
+                  </div>
+                  <div class="col-12">
+                    <textarea class="margin-l" name="Message" placeholder="A Few Words" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-l btn-light" type="submit">
+                      <span class="btn-title">Send</span>
+                      <span class="btn-hover">Send</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <!-- Contact Form End  -->
 
-            if (rect.top < windowHeight && !el.classList.contains('show')) {
-                el.classList.add('show');
-            }
-        });
-    }
+          </div>
+          <!-- Say Hello Form Container End -->
 
-    window.addEventListener('scroll', animatePricingText);
-    window.addEventListener('resize', animatePricingText);
-    animatePricingText(); // trigger on load if already visible
-});
+        </div>
+        <!-- Popup Content End -->
 
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-    const pricingCards = document.querySelectorAll('.pricing-card');
+      </div>
+    </div>
+    <!-- Say Hello Popup End -->
 
-    function animatePricingCards() {
-        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-        pricingCards.forEach((card, index) => {
-            const rect = card.getBoundingClientRect();
+      <!-- Background of PhotoSwipe.
+      It's a separate element, as animating opacity is faster than rgba(). -->
+      <div class="pswp__bg"></div>
 
-            if (rect.top < windowHeight - 150 && !card.classList.contains('show')) {
-                const delay = card.classList.contains('featured') ? 100 : index * 200;
-                setTimeout(() => {
-                    card.classList.add('show');
-                }, delay);
-            }
-        });
-    }
+      <!-- Slides wrapper with overflow:hidden. -->
+      <div class="pswp__scroll-wrap">
 
-    window.addEventListener('scroll', animatePricingCards);
-    window.addEventListener('resize', animatePricingCards);
-    animatePricingCards();
-});
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
 
-</script>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
 
+          <div class="pswp__top-bar">
 
+            <!--  Controls are self-explanatory. Order can be changed. -->
 
-</body>
+            <div class="pswp__counter"></div>
+
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+            <!-- element will get class pswp__preloader-active when preloader is running -->
+            <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+            </div>
+          </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Load Scripts Start -->
+    <script src="js/libs.min.js"></script>
+    <script src="js/gallery-init.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- Load Scripts End -->
+
+  </body>
 
 </html>
