@@ -1,6 +1,6 @@
 // ------------------------------------------------
-// Project Name: Ignite - Coming Soon and Landing Page Template
-// Project Description: Ignite - functional and beautifully designed coming soon and landing page template to kick-start your project
+// Project Name: AADIANT
+// Project Description: AADIANT
 // Tags: mix_design, coming soon, under construction, template, landing page, portfolio, one page, responsive, html5, css3, creative, clean, agency, personal page
 // Version: 1.0.0
 // Build Date: May 2023
