@@ -154,9 +154,9 @@ $(function() {
       transition: 'fade2',
       transitionDuration: 2000,
       slides: [
-        { src: "img/backgrounds/ball.jpg" },
-        { src: "img/backgrounds/slide_2.jpg" },
-        { src: "img/backgrounds/slide_3.jpg" }
+        { src: "img/backgrounds/slide_3.jpg" },
+        { src: "img/backgrounds/part.jpg" },
+        { src: "img/backgrounds/slide_1.jpg" }
       ],
       animation: [ 'kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight' ]
     });
