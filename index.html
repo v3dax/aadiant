@@ -568,72 +568,70 @@
     <!-- Notify Popup End -->
 
     <!-- Say Hello Popup Start -->
-    <div id="sayhello" class="popup sayhello">
-      <div class="popup__container">
+<div id="sayhello" class="popup sayhello">
+  <div class="popup__container">
 
-        <!-- Popup Content Start -->
-        <div class="popup__content block-rounded-s">
+    <!-- Popup Content Start -->
+    <div class="popup__content block-rounded-s">
 
-          <!-- popup close button -->
-          <a href="#0" id="sayhello-close" class="popup-close">
-            <i class="fa-solid fa-xmark"></i>
-          </a>
+      <!-- popup close button -->
+      <a href="#0" id="sayhello-close" class="popup-close">
+        <i class="fa-solid fa-xmark"></i>
+      </a>
 
-          <!-- Say Hello Popup Title Start -->
-          <div class="popup-title">
-            <p class="popup-title__title">Let's talk!</p>
-          </div>
-          <!-- Say Hello Popup Title End -->
+      <!-- Say Hello Popup Title Start -->
+      <div class="popup-title">
+        <p class="popup-title__title">Let's talk!</p>
+      </div>
+      <!-- Say Hello Popup Title End -->
 
-          <!-- Say Hello Form Container Start -->
-          <div class="form-container">
+      <!-- Say Hello Form Container Start -->
+      <div class="form-container">
 
-            <!-- Reply Messages Start-->
-            <div class="reply-group">
-              <i class="fa-solid fa-circle-check reply-group__icon"></i>
-              <p class="reply-group__title">Done!</p>
-              <span class="reply-group__text">Thanks for your message. We will get back as soon as possible</span>
-            </div>
-            <!-- Reply Messages End-->
-
-            <!-- Contact Form Start -->
-            <form class="form form-light sayhello-form" id="sayhello-form">
-              <!-- Hidden Required Fields -->
-              <input type="hidden" name="project_name" value="AADIANT.com">
-              <input type="hidden" name="admin_email" value="aadiantds@gmail.com">
-              <input type="hidden" name="form_subject" value="Contact Form Message">
-              <!-- END Hidden Required Fields-->
-              <div class="container-fluid px-0">
-                <div class="row gx-5">
-                  <div class="col-12 col-md-6">
-                    <input class="" type="text" name="Name" placeholder="Your Name" required>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <input class="" type="text" name="Company" placeholder="Your Email" required>
-                  </div>
-                  <div class="col-12">
-                    <textarea class="margin-l" name="Message" placeholder="A Few Words" required></textarea>
-                  </div>
-                  <div class="col-12">
-                    <button class="btn btn-l btn-light" type="submit">
-                      <span class="btn-title">Send</span>
-                      <span class="btn-hover">Send</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <!-- Contact Form End  -->
-
-          </div>
-          <!-- Say Hello Form Container End -->
-
+        <!-- Reply Messages Start-->
+        <div class="reply-group">
+          <i class="fa-solid fa-circle-check reply-group__icon"></i>
+          <p class="reply-group__title">Done!</p>
+          <span class="reply-group__text">Thanks for your message. We will get back as soon as possible</span>
         </div>
-        <!-- Popup Content End -->
+        <!-- Reply Messages End-->
+
+        <!-- Contact Form Start -->
+        <form class="form form-light sayhello-form" id="sayhello-form"
+              action="https://formspree.io/f/mvgwjjgo" method="POST">
+          <div class="container-fluid px-0">
+            <div class="row gx-5">
+              <div class="col-12 col-md-6">
+                <input type="text" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-12 col-md-6">
+                <input type="email" name="email" placeholder="Your Email" required>
+              </div>
+              <div class="col-12">
+                <textarea class="margin-l" name="message" placeholder="A Few Words" required></textarea>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-l btn-light" type="submit">
+                  <span class="btn-title">Send</span>
+                  <span class="btn-hover">Send</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- Contact Form End  -->
 
       </div>
+      <!-- Say Hello Form Container End -->
+
     </div>
-    <!-- Say Hello Popup End -->
+    <!-- Popup Content End -->
+
+  </div>
+</div>
+<!-- Say Hello Popup End -->
+
+
 
     <!-- Root element of PhotoSwipe. Must have class pswp. -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">

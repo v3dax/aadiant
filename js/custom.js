@@ -219,30 +219,38 @@ $(function() {
   // Mailchimp Notify Form End
   // --------------------------------------------- //
 
-  // --------------------------------------------- //
-  // Say Hello Form Start
-  // --------------------------------------------- //
-  $("#sayhello-form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-      $('.sayhello').find('.form').addClass('is-hidden');
-      $('.sayhello').find('.reply-group').addClass('is-visible');
-			setTimeout(function() {
-				// Done Functions
-        $('.sayhello').find('.reply-group').removeClass('is-visible');
-        $('.sayhello').find('.form').delay(300).removeClass('is-hidden');
-				th.trigger("reset");
-			}, 5000);
-		});
-		return false;
-	});
-  // --------------------------------------------- //
-  // Say Hello Form End
-  // --------------------------------------------- //
+// --------------------------------------------- //
+// Say Hello Form with Formspree AJAX Start
+// --------------------------------------------- //
+$("#sayhello-form").submit(function(e) {
+    e.preventDefault(); // prevent default form submission
+
+    var th = $(this);
+
+    $.ajax({
+        type: "POST",
+        url: "https://formspree.io/f/mvgwjjgo", // your Formspree URL
+        data: th.serialize(),
+        dataType: "json"
+    }).done(function() {
+        // hide form and show "Done!" message
+        $('.sayhello').find('.form').addClass('is-hidden');
+        $('.sayhello').find('.reply-group').addClass('is-visible');
+
+        setTimeout(function() {
+            // reset popup after 5 seconds
+            $('.sayhello').find('.reply-group').removeClass('is-visible');
+            $('.sayhello').find('.form').delay(300).removeClass('is-hidden');
+            th.trigger("reset");
+        }, 5000);
+    }).fail(function() {
+        // show an error message in the same popup instead of alert
+        alert("Oops! Something went wrong. Please try again later.");
+    });
+});
+// --------------------------------------------- //
+// Say Hello Form with Formspree AJAX End
+// --------------------------------------------- //
 
   // --------------------------------------------- //
   // ParticlesJS Background Start
