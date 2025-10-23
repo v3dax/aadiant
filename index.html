@@ -513,59 +513,62 @@
     <!-- Footer Desktop End -->
 
     <!-- Notify Popup Start -->
-    <div id="notify" class="popup notify">
-      <div class="popup__container">
+<div id="notify" class="popup notify">
+  <div class="popup__container">
 
-        <!-- Popup Content Start -->
-        <div class="popup__content block-rounded-s">
+    <!-- Popup Content Start -->
+    <div class="popup__content block-rounded-s">
 
-          <!-- popup close button -->
-          <a href="#0" id="notify-close" class="popup-close">
-            <i class="fa-solid fa-xmark"></i>
-          </a>
+      <!-- popup close button -->
+      <a href="#0" id="notify-close" class="popup-close">
+        <i class="fa-solid fa-xmark"></i>
+      </a>
 
-          <!-- Notify Popup Title Start -->
-          <div class="popup-title">
-            <p class="popup-title__title">Get to know about our launch</p>
-            <p class="popup-title__text">Subscribe to our newsletter and we will send you a notification about the launch of our brand new site</p>
-          </div>
-          <!-- Notify Popup Title End -->
+      <!-- Notify Popup Title Start -->
+      <div class="popup-title">
+        <p class="popup-title__title">Get to know about our launch</p>
+        <p class="popup-title__text">
+          Subscribe to our newsletter and we will send you a notification about the launch of our brand new site
+        </p>
+      </div>
+      <!-- Notify Popup Title End -->
 
-          <!-- Notify Form Container Start -->
-          <div class="form-container">
+      <!-- Notify Form Container Start -->
+      <div class="form-container">
 
-            <!-- Reply Messages Start-->
-            <div class="reply-group subscription-ok">
-              <i class="fa-solid fa-circle-check reply-group__icon"></i>
-              <p class="reply-group__title txt-light">Done!</p>
-              <span class="reply-group__text">Thanks for subscribing. We will send you a notification about our launch.</span>
-            </div>
-            <div class="reply-group subscription-error">
-              <i class="fa-solid fa-face-frown-open reply-group__icon"></i>
-              <p class="reply-group__title">Ooops!</p>
-              <span class="reply-group__text">Something went wrong. Please try again later.</span>
-            </div>
-            <!-- Reply Messages End-->
-
-            <!-- Notify Contact Form Start-->
-            <form class="form notify-form form-light">
-              <input class="margin-l" type="email" placeholder="Your Email" required>
-              <button class="btn btn-l btn-light" type="submit">
-                <span class="btn-title">Submit</span>
-                <span class="btn-hover">Submit</span>
-              </button>
-            </form>
-            <!-- Notify Contact Form End-->
-
-          </div>
-          <!-- Notify Form Container End -->
-
+        <!-- Reply Messages Start-->
+        <div class="reply-group subscription-ok">
+          <i class="fa-solid fa-circle-check reply-group__icon"></i>
+          <p class="reply-group__title txt-light">Done!</p>
+          <span class="reply-group__text">Thanks for subscribing. We will send you a notification about our launch.</span>
         </div>
-        <!-- Popup Content End -->
+        <div class="reply-group subscription-error">
+          <i class="fa-solid fa-face-frown-open reply-group__icon"></i>
+          <p class="reply-group__title">Ooops!</p>
+          <span class="reply-group__text">Something went wrong. Please try again later.</span>
+        </div>
+        <!-- Reply Messages End-->
+
+        <!-- Notify Contact Form Start-->
+        <form class="form notify-form form-light" action="https://formspree.io/f/mvgwjjgo" method="POST">
+          <input class="margin-l" type="email" name="email" placeholder="Your Email" required>
+          <button class="btn btn-l btn-light" type="submit">
+            <span class="btn-title">Submit</span>
+            <span class="btn-hover">Submit</span>
+          </button>
+        </form>
+        <!-- Notify Contact Form End-->
 
       </div>
+      <!-- Notify Form Container End -->
+
     </div>
-    <!-- Notify Popup End -->
+    <!-- Popup Content End -->
+
+  </div>
+</div>
+<!-- Notify Popup End -->
+
 
     <!-- Say Hello Popup Start -->
 <div id="sayhello" class="popup sayhello">

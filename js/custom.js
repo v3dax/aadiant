@@ -186,38 +186,48 @@ $(function() {
   // Skillbars Settings End
   // --------------------------------------------- //
 
-  // --------------------------------------------- //
-  // Mailchimp Notify Form Start
-  // --------------------------------------------- //
-  $('.notify-form').ajaxChimp({
-    callback: mailchimpCallback,
-    url: 'https://besaba.us10.list-manage.com/subscribe/post?u=e8d650c0df90e716c22ae4778&amp;id=54a7906900'
-  });
+ // --------------------------------------------- //
+// Notify Form (Formspree) Start
+// --------------------------------------------- //
+$(document).on("submit", "#notify .notify-form", function (e) {
+  e.preventDefault(); // prevent default form submission
+  var th = $(this);
 
-  function mailchimpCallback(resp) {
-    if(resp.result === 'success') {
-      $('.notify').find('.form').addClass('is-hidden');
-      $('.notify').find('.subscription-ok').addClass('is-visible');
-      setTimeout(function() {
-        // Done Functions
-        $('.notify').find('.subscription-ok').removeClass('is-visible');
-        $('.notify').find('.form').delay(300).removeClass('is-hidden');
-        $('.notify-form').trigger("reset");
+  $.ajax({
+    type: "POST",
+    url: "https://formspree.io/f/mvgwjjgo", // use the same endpoint as in your HTML
+    data: th.serialize(),
+    dataType: "json"
+  })
+    .done(function () {
+      // hide form and show success
+      $('#notify').find('.form').addClass('is-hidden');
+      $('#notify').find('.subscription-ok').addClass('is-visible');
+
+      setTimeout(function () {
+        // Reset after 5s
+        $('#notify').find('.subscription-ok').removeClass('is-visible');
+        $('#notify').find('.form').delay(300).removeClass('is-hidden');
+        th.trigger("reset");
       }, 5000);
-    } else if(resp.result === 'error') {
-      $('.notify').find('.form').addClass('is-hidden');
-      $('.notify').find('.subscription-error').addClass('is-visible');
-      setTimeout(function() {
-        // Done Functions
-        $('.notify').find('.subscription-error').removeClass('is-visible');
-        $('.notify').find('.form').delay(300).removeClass('is-hidden');
-        $('.notify-form').trigger("reset");
+    })
+    .fail(function () {
+      // hide form and show error
+      $('#notify').find('.form').addClass('is-hidden');
+      $('#notify').find('.subscription-error').addClass('is-visible');
+
+      setTimeout(function () {
+        $('#notify').find('.subscription-error').removeClass('is-visible');
+        $('#notify').find('.form').delay(300).removeClass('is-hidden');
+        th.trigger("reset");
       }, 5000);
-    }
-  };
-  // --------------------------------------------- //
-  // Mailchimp Notify Form End
-  // --------------------------------------------- //
+    });
+});
+// --------------------------------------------- //
+// Notify Form (Formspree) End
+// --------------------------------------------- //
+
+
 
 // --------------------------------------------- //
 // Say Hello Form with Formspree AJAX Start
