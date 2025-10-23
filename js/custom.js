@@ -186,47 +186,42 @@ $(function() {
   // Skillbars Settings End
   // --------------------------------------------- //
 
- // --------------------------------------------- //
+  // --------------------------------------------- //
 // Notify Form (Formspree) Start
 // --------------------------------------------- //
-$(document).on("submit", "#notify .notify-form", function (e) {
-  e.preventDefault(); // prevent default form submission
-  var th = $(this);
+$("#notify .notify-form").submit(function(e) {
+    e.preventDefault(); // prevent default form submission
+    var th = $(this);
 
-  $.ajax({
-    type: "POST",
-    url: "https://formspree.io/f/mvgwjjgo", // use the same endpoint as in your HTML
-    data: th.serialize(),
-    dataType: "json"
-  })
-    .done(function () {
-      // hide form and show success
-      $('#notify').find('.form').addClass('is-hidden');
-      $('#notify').find('.subscription-ok').addClass('is-visible');
+    $.ajax({
+        type: "POST",
+        url: "https://formspree.io/f/mvgwjjgo", // your Formspree URL
+        data: th.serialize(),
+        dataType: "json" // important
+    }).done(function() {
+        $('#notify').find('.notify-form').addClass('is-hidden');
+        $('#notify').find('.subscription-ok').addClass('is-visible');
 
-      setTimeout(function () {
-        // Reset after 5s
-        $('#notify').find('.subscription-ok').removeClass('is-visible');
-        $('#notify').find('.form').delay(300).removeClass('is-hidden');
-        th.trigger("reset");
-      }, 5000);
-    })
-    .fail(function () {
-      // hide form and show error
-      $('#notify').find('.form').addClass('is-hidden');
-      $('#notify').find('.subscription-error').addClass('is-visible');
+        setTimeout(function() {
+            $('#notify').find('.subscription-ok').removeClass('is-visible');
+            $('#notify').find('.notify-form').delay(300).removeClass('is-hidden');
+            th.trigger("reset");
+        }, 5000);
+    }).fail(function() {
+        $('#notify').find('.notify-form').addClass('is-hidden');
+        $('#notify').find('.subscription-error').addClass('is-visible');
 
-      setTimeout(function () {
-        $('#notify').find('.subscription-error').removeClass('is-visible');
-        $('#notify').find('.form').delay(300).removeClass('is-hidden');
-        th.trigger("reset");
-      }, 5000);
+        setTimeout(function() {
+            $('#notify').find('.subscription-error').removeClass('is-visible');
+            $('#notify').find('.notify-form').delay(300).removeClass('is-hidden');
+            th.trigger("reset");
+        }, 5000);
     });
 });
+
 // --------------------------------------------- //
 // Notify Form (Formspree) End
 // --------------------------------------------- //
-
 
 
 // --------------------------------------------- //
