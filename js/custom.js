@@ -388,4 +388,117 @@ $("#sayhello-form").submit(function(e) {
   // ParticlesJS Background End
   // --------------------------------------------- //
 
+  // --------------------------------------------- //
+  // Login section open (custom)
+  // Mirrors behavior of about/contact triggers so the menu opens the login inner section
+  // --------------------------------------------- //
+  var loginTrigger = $('#login-trigger'),
+      loginSection = $('#login'),
+      header = $('#header'),
+      footer = $('#footer');
+
+  loginTrigger.on('click', function(event) {
+    event.preventDefault();
+    setTimeout(function(){
+      loginSection.addClass('active animate-in');
+      loginTrigger.addClass('active-link');
+    }, 500);
+    setTimeout(function(){
+      header.addClass('inner-is-visible');
+      footer.addClass('inner-is-visible');
+    }, 1500);
+  });
+
+  // register section open (from login link)
+  var registerTrigger = $('#register-trigger'),
+      registerSection = $('#register');
+
+  registerTrigger.on('click', function(event) {
+    event.preventDefault();
+
+    // Prevent double clicks while animating
+    if (registerTrigger.data('animating')) return;
+    registerTrigger.data('animating', true);
+
+    // If login section is currently active, keep it visible and play its fade-out animation
+    if (loginSection.length && loginSection.hasClass('active')) {
+      // start fade-out of login section (it will stay until we remove the class)
+      loginSection.addClass('animate-out');
+
+      // After a short delay, bring the register section in with the same timing as other sections
+      setTimeout(function(){
+        registerSection.addClass('active animate-in');
+        registerTrigger.addClass('active-link');
+      }, 500);
+
+      // After the animations finish, remove the old login active classes so only register remains active
+      setTimeout(function(){
+        loginSection.removeClass('active animate-in animate-out');
+        // clear animating flag
+        registerTrigger.data('animating', false);
+      }, 1400);
+
+      setTimeout(function(){
+        header.addClass('inner-is-visible');
+        footer.addClass('inner-is-visible');
+      }, 1500);
+
+    } else {
+      // default behavior (when not coming from login)
+      setTimeout(function(){
+        registerSection.addClass('active animate-in');
+        registerTrigger.addClass('active-link');
+      }, 500);
+      setTimeout(function(){
+        header.addClass('inner-is-visible');
+        footer.addClass('inner-is-visible');
+        registerTrigger.data('animating', false);
+      }, 1500);
+    }
+  });
+
+  // Back from register to login
+  var registerBack = $('#register-back');
+  registerBack.on('click', function(event) {
+    event.preventDefault();
+
+    // Prevent double clicks
+    if (registerBack.data('animating')) return;
+    registerBack.data('animating', true);
+
+    // If register section is active, play its fade-out and then bring login back
+    if (registerSection.length && registerSection.hasClass('active')) {
+      registerSection.addClass('animate-out');
+
+      setTimeout(function(){
+        // show login
+        loginSection.addClass('active animate-in');
+        // ensure login trigger link becomes active (if needed)
+        loginTrigger.addClass('active-link');
+      }, 500);
+
+      // cleanup after animation
+      setTimeout(function(){
+        registerSection.removeClass('active animate-in animate-out');
+        registerBack.data('animating', false);
+      }, 1400);
+
+      setTimeout(function(){
+        header.addClass('inner-is-visible');
+        footer.addClass('inner-is-visible');
+      }, 1500);
+    } else {
+      // Fallback: open login normally
+      setTimeout(function(){
+        loginSection.addClass('active animate-in');
+        loginTrigger.addClass('active-link');
+        registerBack.data('animating', false);
+      }, 500);
+      setTimeout(function(){
+        header.addClass('inner-is-visible');
+        footer.addClass('inner-is-visible');
+      }, 1500);
+    }
+  });
+
 });

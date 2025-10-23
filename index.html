@@ -41,6 +41,25 @@
     <meta name="msapplication-navbutton-color" content="#0c0c0c">
     <meta name="apple-mobile-web-app-status-bar-style" content="#0c0c0c">
     <!-- Custom Browser Color End -->
+    <style>
+      /* Small, scoped spacing for the login form button to avoid touching links */
+      .login-btn-wrap { margin-top: 1rem; }
+      /* Slightly larger spacing for the login form specifically so it doesn't touch the links */
+      .login-only-btn-wrap { margin-top: 1.6rem; }
+      @media (min-width: 768px) {
+        .login-btn-wrap { margin-top: 1.5rem; }
+        .login-only-btn-wrap { margin-top: 2rem; }
+      }
+      /* Back link styling inside register section */
+      .back-link {
+        display: inline-block;
+        margin-bottom: 1rem;
+        font-weight: 500;
+      }
+      @media (min-width: 768px) {
+        .back-link { margin-bottom: 1.4rem; }
+      }
+    </style>
   </head>
 
   <body>
@@ -78,6 +97,12 @@
               <a id="contact-trigger" class="nav__link" href="#0">
                 <span class="link-title">Contact</span>
                 <span class="link-hover">Contact</span>
+              </a>
+            </li>
+            <li>
+              <a id="login-trigger" class="nav__link" href="#0">
+                <span class="link-title">Login</span>
+                <span class="link-hover">Login</span>
               </a>
             </li>
           </ul>
@@ -463,6 +488,174 @@
     </section>
     <!-- Contact Section End -->
 
+    <!-- Login Section Start -->
+    <section id="login" class="inner contact">
+
+      <!-- Inner Section Content Start -->
+      <div class="inner__content fullheight">
+        <div class="container-fluid px-0 fullheight">
+          <div class="row gx-0 flex-xl-row-reverse fullheight">
+
+            <!-- Inner Section Info Part Start -->
+            <div class="col-12 col-xl-6 inner__info">
+              <div class="blocks-container">
+
+                <!-- Inner Content Block Title Start -->
+                <div class="content-block">
+                  <span class="block__subtitle">03 / Login</span>
+                  <h2 class="block__title">Welcome back — sign in to continue.</h2>
+                  <p class="block__text">Access your dashboard and settings. If you don't have an account yet, you can register or get in touch with us.
+                  </p>
+                </div>
+                <!-- Inner Content Block Title End -->
+
+                <!-- Inner Content Block Form Start -->
+                <div class="content-block">
+                  <form class="form form-light login-form" action="#" method="POST">
+                    <div class="container-fluid px-0">
+                      <div class="row gx-5">
+                        <div class="col-12">
+                          <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="col-12">
+                          <input type="password" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="col-12 d-flex justify-content-between align-items-center">
+                          <a href="#" class="text-link">Forgot password?</a>
+                          <a href="#0" id="register-trigger" class="text-link">Register</a>
+                        </div>
+                        <div class="col-12 login-only-btn-wrap">
+                          <button class="btn btn-l btn-light" type="submit">
+                            <span class="btn-title">Sign In</span>
+                            <span class="btn-hover">Sign In</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- Inner Content Block Form End -->
+
+              </div>
+            </div>
+            <!-- Inner Section Info Part End -->
+
+            <!-- Inner Section Media Part Start -->
+            <div class="col-12 col-xl-6 inner__media">
+              <div class="media-container">
+
+                <!-- Inner Illustration Image Start -->
+                <div class="image contact-image">
+                  <!--<div class="color-layer color-layer-dark"></div>-->
+                  <!-- login image bottom caption -->
+                  <div class="image-caption opposite">
+                    <p>
+                      Access Panel
+                      <span>AADIANT / Render</span>
+                    </p>
+                  </div>
+                </div>
+                <!-- Inner Illustration Image End -->
+                
+              </div>
+            </div>
+            <!-- Inner Section Media Part End -->
+
+          </div>
+        </div>
+      </div>
+      <!-- Inner Section Content End -->
+
+    </section>
+    <!-- Login Section End -->
+
+    <!-- Register Section Start -->
+    <section id="register" class="inner contact">
+
+      <!-- Inner Section Content Start -->
+      <div class="inner__content fullheight">
+        <div class="container-fluid px-0 fullheight">
+          <div class="row gx-0 flex-xl-row-reverse fullheight">
+
+            <!-- Inner Section Info Part Start -->
+            <div class="col-12 col-xl-6 inner__info">
+              <div class="blocks-container">
+
+                <!-- Back Button -->
+                <div class="content-block">
+                  <a href="#0" id="register-back" class="text-link back-link">&larr; Back to Login</a>
+                </div>
+
+                <!-- Inner Content Block Title Start -->
+                <div class="content-block">
+                  <span class="block__subtitle">04 / Register</span>
+                  <h2 class="block__title">Create your account.</h2>
+                  <p class="block__text">Join Aadiant to start using the platform. Fill in basic details and create a secure password.</p>
+                </div>
+                <!-- Inner Content Block Title End -->
+
+                <!-- Inner Content Block Form Start -->
+                <div class="content-block">
+                  <form class="form form-light register-form" action="#" method="POST">
+                    <div class="container-fluid px-0">
+                      <div class="row gx-5">
+                        <div class="col-12 col-md-6">
+                          <input type="text" name="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <input type="password" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <input type="password" name="password_confirm" placeholder="Confirm Password" required>
+                        </div>
+                        <div class="col-12 login-btn-wrap">
+                          <button class="btn btn-l btn-light" type="submit">
+                            <span class="btn-title">Create Account</span>
+                            <span class="btn-hover">Create Account</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- Inner Content Block Form End -->
+
+              </div>
+            </div>
+            <!-- Inner Section Info Part End -->
+
+            <!-- Inner Section Media Part Start -->
+            <div class="col-12 col-xl-6 inner__media">
+              <div class="media-container">
+
+                <!-- Inner Illustration Image Start -->
+                <div class="image contact-image">
+                  <!--<div class="color-layer color-layer-dark"></div>-->
+                  <!-- register image bottom caption -->
+                  <div class="image-caption opposite">
+                    <p>
+                      New Account
+                      <span>AADIANT / Render</span>
+                    </p>
+                  </div>
+                </div>
+                <!-- Inner Illustration Image End -->
+                
+              </div>
+            </div>
+            <!-- Inner Section Media Part End -->
+
+          </div>
+        </div>
+      </div>
+      <!-- Inner Section Content End -->
+
+    </section>
+    <!-- Register Section End -->
+
     <!-- Footer Desktop Start -->
     <footer id="footer" class="footer-desktop split">
       <div class="container-fluid px-0 fullheight">
@@ -633,8 +826,6 @@
   </div>
 </div>
 <!-- Say Hello Popup End -->
-
-
 
     <!-- Root element of PhotoSwipe. Must have class pswp. -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
