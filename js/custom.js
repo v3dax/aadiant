@@ -114,16 +114,26 @@ $(function() {
   // Magnific Popup Video Start
   // --------------------------------------------- //
   $('#showreel-trigger').magnificPopup({
-		type: 'iframe',
-		mainClass: 'mfp-fade',
-		removalDelay: 160,
-		preloader: false,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
     fixedContentPos: false,
+    iframe: {
+        patterns: {
+            youtube: {
+                index: 'youtube.com/',
+                id: 'v=',
+                src: 'https://www.youtube.com/embed/%id%?autoplay=1&mute=1'
+            }
+        }
+    },
     callbacks: {
-      beforeOpen: function() { $('body').addClass('overflow-hidden'); },
-      close: function() { $('body').removeClass('overflow-hidden'); }
+        beforeOpen: function() { $('body').addClass('overflow-hidden'); },
+        close: function() { $('body').removeClass('overflow-hidden'); }
     }
-	});
+});
+
   // --------------------------------------------- //
   // Magnific Popup Video End
   // --------------------------------------------- //
