@@ -7,6 +7,41 @@
 // ------------------------------------------------
 // Table of Contents
 // ------------------------------------------------
+
+  // --------------------------------------------- //
+  // Particles for Main Intro Left (interactive)
+  // --------------------------------------------- //
+  var particlesMainLeft = $('#particles-main-left');
+  if (particlesMainLeft.length) {
+    // lightweight config with interactivity
+    particlesJS('particles-main-left', {
+      "particles": {
+        "number": {
+          "value": (window.innerWidth > 1200) ? 80 : 45,
+          "density": { "enable": true, "value_area": 700 }
+        },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.8, "random": true },
+        "size": { "value": 3.5, "random": true },
+        "line_linked": { "enable": false },
+        "move": { "enable": true, "speed": 2.2, "direction": "none", "out_mode": "out" }
+      },
+      "interactivity": {
+        "detect_on": "window",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": false, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "repulse": { "distance": 90, "duration": 0.4 },
+          "push": { "particles_nb": 6 }
+        }
+      },
+      "retina_detect": true
+    });
+  }
 //
 //  1. Loader & Loading Animation
 //  2. Typed.js Plugin Settings
