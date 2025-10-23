@@ -1573,6 +1573,8 @@ form textarea {
   height: 10rem;
   resize: none;
   margin: 0 0 2.4rem 0;
+  padding-top: 5.44rem;
+  line-height: 2;
 }
 form input.margin-s, form textarea.margin-s {
   margin: 0 0 0.6rem 0;
@@ -2638,8 +2640,6 @@ form input.margin-l, form textarea.margin-l {
   width: 100%;
   height: auto;
   background-color: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
   -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
      -moz-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
           box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -3236,3 +3236,4 @@ form input.margin-l, form textarea.margin-l {
 /* ------------------------------------------------*/
 /* Gallery End */
 /* ------------------------------------------------*/
+
