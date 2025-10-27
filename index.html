@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Page Title-->
+    <title>AADIANT</title>
+
+    <!-- Meta Tags-->
+    <meta name="description" content="AADIANT.com">
+    <meta name="keywords" content="AADIANT.com">
+    <meta name="author" content="mix_design">
+
+    <!-- Viewport Meta-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Favicon & Icons Start -->
+    <link rel="icon" href="img/favicon/logo.svg" sizes="any">
+    <link rel="icon" href="img/favicon/logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/logo.png">
+    <link rel="manifest" href="img/favicon/manifest.webmanifest">
+    <!-- Template Favicon & Icons End -->
+
+    <!-- Facebook Metadata Start -->
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:title" content="AADIANT.com">
+    <meta property="og:description" content="AADIANT.com">
+    <!-- Facebook Metadata End -->
+
+    <!-- Template Styles Start -->
+    <link rel="stylesheet" type="text/css" href="css/loaders/loader.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- Template Styles End -->
+
+    <!-- Custom Browser Color Start -->
+    <meta name="theme-color" content="#0c0c0c">
+    <meta name="msapplication-navbutton-color" content="#0c0c0c">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0c0c0c">
+    <!-- Custom Browser Color End -->
+    <style>
+      /* Small, scoped spacing for the login form button to avoid touching links */
+      .login-btn-wrap { margin-top: 1rem; }
+      /* Slightly larger spacing for the login form specifically so it doesn't touch the links */
+      .login-only-btn-wrap { margin-top: 1.6rem; }
+      @media (min-width: 768px) {
+        .login-btn-wrap { margin-top: 1.5rem; }
+        .login-only-btn-wrap { margin-top: 2rem; }
+      }
+      /* Back link styling inside register section */
+      .back-link {
+        display: inline-block;
+        margin-bottom: 1rem;
+        font-weight: 500;
+      }
+      @media (min-width: 768px) {
+        .back-link { margin-bottom: 1.4rem; }
+      }
+      /* Particles in main intro left */
+      #particles-main-left{
+        position:absolute;
+        top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;
+      }
+      .intro__content { position:relative; z-index:1; }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Loader Start -->
+    <div class="loader">
+      <div class="loader__content">
+        <div class="loader__logo">
+          <img src="img/logo.svg" alt="AADIANT">
+        </div>
+      </div>
+    </div>
+    <!-- Loader End -->
+
+    <!-- Navigation Start -->
+    <nav id="nav" class="nav">
+      <div class="nav__container">
+        <!-- menu background -->
+        <div class="nav__background"></div>
+        <div class="nav__content text-center">
+          <ul class="navigation">
+            <li>
+              <a id="home-trigger" class="nav__link" href="#0">
+                <span class="link-title">Home</span>
+                <span class="link-hover">Home</span>
+              </a>
+            </li>
+            <li>
+              <a id="about-trigger" class="nav__link" href="#0">
+                <span class="link-title">About Us</span>
+                <span class="link-hover">About Us</span>
+              </a>
+            </li>
+            <li>
+              <a id="contact-trigger" class="nav__link" href="#0">
+                <span class="link-title">Contact</span>
+                <span class="link-hover">Contact</span>
+              </a>
+            </li>
+            <li>
+              <a id="login-trigger" class="nav__link" href="#0">
+                <span class="link-title">Login</span>
+                <span class="link-hover">Login</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation End -->
+
+    <!-- Header Start -->
+    <header id="header" class="header split">
+      <div class="container-fluid px-0 fullheight-mobile">
+        <div class="row gx-0 fullheight-mobile">
+          <div class="col-6 fullheight-mobile header__left">
+
+            <!-- Logo Start -->
+            <div class="logo">
+              <a href="index.html">
+              <img src="img/logo.svg" alt="AADIANT">
+              </a>
+              <span class="logo-text">diant.</span>
+            </div>
+            <!-- Logo End -->
+
+          </div>
+          <div class="col-6 fullheight header__right">
+
+            <!-- Say Hello Button Start -->
+            <a href="#0" id="sayhello-trigger" class="btn btn-s sayhello-trigger">
+              <i class="fa-solid fa-pencil"></i>
+              <span class="title">Say Hello</span>
+              <span class="hover">Say Hello</span>
+            </a>
+            <!-- Say Hello Button End -->
+
+            <!-- Menu Trigger Start -->
+            <div class="menu-button">
+              <a href="#0" id="menu-trigger" class="menu-trigger">
+                <span class="burger"></span>
+                <span class="circle"></span>
+              </a>
+            </div>
+            <!-- Menu Trigger End -->
+
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Main Section Start -->
+    <section id="main" class="main">
+
+      <!-- Main Section Content Start -->
+      <div class="main__content fullheight">
+        <div class="container-fluid px-0 fullheight">
+          <div class="row gx-0 fullheight">
+
+            <!-- Main Section Intro Start -->
+            <div class="col-12 col-xl-6 main__intro fullheight">
+
+              <!-- Intro Background Start -->
+              <div class="intro__background">
+                <!-- triangles background -->
+                <!--<div id="triangles-js"></div>-->
+                <!-- Particles for the left intro text area (interactive) -->
+                <div id="particles-main-left"></div>
+              </div>
+              <!-- Intro Background End -->
+
+              <!-- Main Intro Content Start -->
+              <div class="intro__content fullheight">
+
+                <!-- Headline Start -->
+                <div id="headline" class="headline">
+                  <span class="headline__subtitle animated-headline">
+                    <span id="typed-strings">
+                      <b>Unlock hidden insights.</b>
+                      <b>Discover what your data knows.</b>
+                      <b>Transform numbers into opportunities.</b>
+                    </span>
+                    <span id="typed"></span>
+                  </span>
+                  <h1 class="headline__title">Your data’s secrets, arriving shortly.</h1>
+                  <div class="headline__btnholder">
+                    <a href="https://www.youtube.com/watch?v=AuKR2fQbMBk" id="showreel-trigger" class="btn btn-l-icon btn-light">
+                      <span class="btn-icon-title">Play Showreel</span>
+                      <span class="btn-icon-anim"><i class="fa-solid fa-play"></i></span>
+                    </a>
+                    <a href="#" id="notify-trigger" class="btn btn-l btn-outline-light">
+                      <span class="btn-title">Notify me</span>
+                      <span class="btn-hover">Notify me</span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Headline End -->
+
+              </div>
+              <!-- Main Intro Content End -->
+
+              <!-- Footer Mobile Start -->
+              <div class="footer-mobile split">
+                <div class="container-mobile fullheight-mobile d-flex align-items-center">
+                  <div class="container-fluid px-0">
+                    <div class="row gx-0">
+                      <div class="col-6 text-start footer-mobile__socials">
+                        <!-- intro socials links -->
+                        <ul class="socials d-flex align-items-start">
+                          <li>
+                  <a class="btn btn-s-text" href="https://twitter.com/aadiantds" target="_blank">
+                    <span class="title">X</span>
+                    <span class="hover">X</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn btn-s-text" href="https://www.youtube.com/@aadiantds" target="_blank">
+                    <span class="title">Yt</span>
+                    <span class="hover">Yt</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn btn-s-text" href="https://www.instagram.com/aadiantds" target="_blank">
+                    <span class="title">In</span>
+                    <span class="hover">In</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn btn-s-text" href="https://www.facebook.com/61582793127965" target="_blank">
+                    <span class="title">Fb</span>
+                    <span class="hover">Fb</span>
+                  </a>
+                </li>
+                        </ul>
+                      </div>
+                      <div class="col-6 text-end footer-mobile__copyright">
+                        <!-- intro copyright link -->
+                        <p class="copyright">
+                          <i class="fa-regular fa-copyright"></i>
+                          <a target="_blank">AADIANT</a>,
+                          2025
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Footer Mobile End -->
+
+            </div>
+            <!-- Main Section Intro End -->
+
+            <!-- Main Section Media Start -->
+            <div class="col-12 col-xl-6 main__media fullheight">
+              <div class="media__content">
+                <!-- kenburns background -->
+                <div id="bgndKenburns"></div>
+              </div>
+            </div>
+            <!-- Main Section Media End -->
+
+          </div>
+        </div>
+      </div>
+      <!-- Main Section Content End -->
+
+    </section>
+    <!-- Main Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="inner about">
+      
+      <!-- Inner Section Content Start -->
+      <div class="inner__content fullheight">
+        <div class="container-fluid px-0 fullheight">
+          <div class="row gx-0 flex-xl-row-reverse fullheight">
+
+            <!-- Inner Section Info Part Start -->
+            <div class="col-12 col-xl-6 inner__info">
+              <div class="blocks-container">
+
+                <!-- Inner Content Block Title Start -->
+                <div class="content-block">
+                  <span class="block__subtitle">01 / About Us</span>
+                  <h2 class="block__title">Crafting the Future of Data Insights.</h2>
+                  <p class="block__text">We’re building something extraordinary. A platform where AI meets your data, 
+    security is always first, and insights are only the beginning.
+    <a class="text-link">Curious? Keep watching.</a>
+                  </p>
+                </div>
+                <!-- Inner Content Block Title End -->
+
+                <!-- Inner Content Block Skillbars Start -->
+                <div class="content-block">
+                  <div class="skillbars">
+                    <!-- Skillbar single item -->
+                    <div class="show-skillbar">
+                      <div class="skillbar light" data-percent="81">
+                        <span class="skillbar-title light">Phase_A |  Foundations.</span>
+                        <p class="skillbar-bar light" style="width: 81%;"></p>
+                        <span class="skill-bar-percent light">81%</span>
+                      </div>
+                    </div>
+                    <!-- Skillbar single item -->
+                    <div class="show-skillbar">
+                      <div class="skillbar light" data-percent="47">
+                        <span class="skillbar-title light">Phase_B |  Core Engine.</span>
+                        <p class="skillbar-bar light" style="width: 47%;"></p>
+                        <span class="skill-bar-percent light">47%</span>
+                      </div>
+                    </div>
+                    <!-- Skillbar single item -->
+                    <div class="show-skillbar">
+                      <div class="skillbar light" data-percent="20">
+                        <span class="skillbar-title light">Phase_C |  Scaling.</span>
+                        <p class="skillbar-bar light" style="width: 20%;"></p>
+                        <span class="skill-bar-percent light">20%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Inner Content Block Skillbars End -->
+
+              </div>
+            </div>
+            <!-- Inner Section Info Part End -->
+
+            <!-- Inner Section Media Part Start -->
+            <div class="col-12 col-xl-6 inner__media">
+              <div class="media-container">
+
+                <!-- Inner Illustration Image Start -->
+                <div class="image about-image">
+                  <!--<div class="color-layer color-layer-dark"></div>-->
+                  <!-- About image bottom caption -->
+                  <div class="image-caption opposite">
+                    <p>
+                      Lost in Space
+                      <span>Ved / Render</span>
+                    </p>
+                  </div>
+                </div>
+                <!-- Inner Illustration Image End -->
+                
+              </div>
+            </div>
+            <!-- Inner Section Media Part End -->
+
+          </div>
+        </div>
+      </div>
+      <!-- Inner Section Content End -->
+
+    </section>
+    <!-- About Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="inner contact">
+
+      <!-- Inner Section Content Start -->
+      <div class="inner__content fullheight">
+        <div class="container-fluid px-0 fullheight">
+          <div class="row gx-0 flex-xl-row-reverse fullheight">
+
+            <!-- Inner Section Info Part Start -->
+            <div class="col-12 col-xl-6 inner__info">
+              <div class="blocks-container">
+
+                <!-- Inner Content Block Title Start -->
+                <div class="content-block">
+                  <span class="block__subtitle">02 / Contact</span>
+                  <h2 class="block__title">We’re here to connect.</h2>
+                  <p class="block__text">Aadiant is steadily growing. While some parts are still in progress, you can reach out anytime. <a href="tel:+918797721054" class="text-link">Call us</a> or send a message through the say hello form. Our office hours are <span>9:00</span> – <span>18:00</span> IST.
+                  </p>
+                </div>
+                <!-- Inner Content Block Title End -->
+
+                <!-- Inner Content Block Skillbars Start -->
+                <div class="content-block">
+                  <div class="container-fluid px-0">
+                    <div class="row gx-5">
+                      <!-- contact data item -->
+                      <div class="col-12 col-md-4 contactdata__item">
+                        <h5 class="contactdata__title">Location</h5>
+                        <div class="contactdata__descr d-flex align-items-start">
+                          <div class="contactdata__icon">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                          </div>
+                          <div class="contactdata__text">
+                            <p><a class="contact-link" target="_blank">Earth<br>Solar System, Milky Way</a></p>
+                          </div>
+                        </div>
+                        <div class="contactdata__descr d-flex align-items-start">
+                          <div class="contactdata__icon">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                          </div>
+                          <div class="contactdata__text">
+                            <p><a class="contact-link" target="_blank">M51-ULS-1b<br>Star System M51-ULS-1, Whirlpool Galaxy (M51)</a></p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- contact data item -->
+                      <div class="col-12 col-md-4 contactdata__item">
+                        <h5 class="contactdata__title">Contact</h5>
+                        <div class="contactdata__descr d-flex align-items-start">
+                          <div class="contactdata__icon">
+                            <i class="fa-solid fa-phone"></i>
+                          </div>
+                          <div class="contactdata__text">
+                            <p>
+                              <a class="contact-link" href="tel:+918797721054">+91 8797721054</a>
+                              <br>
+                              <a class="contact-link" href="tel:+15104570211">+x1 13x3370qx0 (M51-ULS-1b)</a>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="contactdata__descr d-flex align-items-start">
+                          <div class="contactdata__icon">
+                            <i class="fa-solid fa-envelope"></i>
+                          </div>
+                          <div class="contactdata__text">
+                            <a class="contact-link" href="mailto:example@example.com?subject=Message%20from%20your%20site">aadiantds@gmail.com</a>
+                            <br>
+                            <a class="contact-link" href="mailto:example@example.com?subject=Message%20from%20your%20site">aphelody@gmail.com</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- contact data item -->
+                      <div class="col-12 col-md-4 contactdata__item">
+                        <h5 class="contactdata__title">Follow us</h5>
+                        <div class="contactdata__descr d-flex align-items-start">
+                          <ul class="contactdata__socials">
+                            <li>
+                              <i class="fa-brands fa-facebook"></i>
+                              <a class="contact-link" href="https://www.facebook.com/61582793127965" target="_blank">Facebook</a>
+                            </li>
+                            <li>
+                              <i class="fa-brands fa-instagram"></i>
+                              <a class="contact-link" href="https://www.instagram.com/aadiantds" target="_blank">Instagram</a>
+                            </li>
+                            <li>
+                              <i class="fa-brands fa-twitter"></i>
+                              <a class="contact-link" href="https://twitter.com/aadiantds" target="_blank">Twitter</a>
+                            </li>
+                            <li>
+                              <i class="fa-brands fa-pinterest"></i>
+                              <a class="contact-link" href="https://pinterest.com/aadiantds" target="_blank">Pinterest</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Inner Content Block Skillbars End -->
+
+              </div>
+            </div>
+            <!-- Inner Section Info Part End -->
+
+            <!-- Inner Section Media Part Start -->
+            <div class="col-12 col-xl-6 inner__media">
+              <div class="media-container">
+
+                <!-- Inner Illustration Image Start -->
+                <div class="image contact-image">
+                  <!--<div class="color-layer color-layer-dark"></div>-->
+                  <!-- contact image bottom caption -->
+                  <div class="image-caption opposite">
+                    <p>
+                      Building Connections
+                      <span>AADIANT TEAM / Render</span>
+                    </p>
+                  </div>
+                </div>
+                <!-- Inner Illustration Image End -->
+                
+              </div>
+            </div>
+            <!-- Inner Section Media Part End -->
+
+          </div>
+        </div>
+      </div>
+      <!-- Inner Section Content End -->
+
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Login Section Start -->
+    <section id="login" class="inner contact">
+
+      <!-- Inner Section Content Start -->
+      <div class="inner__content fullheight">
+        <div class="container-fluid px-0 fullheight">
+          <div class="row gx-0 flex-xl-row-reverse fullheight">
+
+            <!-- Inner Section Info Part Start -->
+            <div class="col-12 col-xl-6 inner__info">
+              <div class="blocks-container">
+
+                <!-- Inner Content Block Title Start -->
+                <div class="content-block">
+                  <span class="block__subtitle">03 / Login</span>
+                  <h2 class="block__title">Welcome back — sign in to continue.</h2>
+                  <p class="block__text">Access your dashboard and settings. If you don't have an account yet, you can register or get in touch with us.
+                  </p>
+                </div>
+                <!-- Inner Content Block Title End -->
+
+                <!-- Inner Content Block Form Start -->
+                <div class="content-block">
+                  <form class="form form-light login-form" action="http://127.0.0.1:5000/login" method="POST">
+                    <div class="container-fluid px-0">
+                      <div class="row gx-5">
+                        <div class="col-12">
+                          <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="col-12">
+                          <input type="password" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="col-12 d-flex justify-content-between align-items-center">
+                          <a href="#" class="text-link">Forgot password?</a>
+                          <a href="#0" id="register-trigger" class="text-link">Register</a>
+                        </div>
+                        <div class="col-12 login-only-btn-wrap">
+                          <button class="btn btn-l btn-light" type="submit">
+                            <span class="btn-title">Sign In</span>
+                            <span class="btn-hover">Sign In</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- Inner Content Block Form End -->
+
+              </div>
+            </div>
+            <!-- Inner Section Info Part End -->
+
+            <!-- Inner Section Media Part Start -->
+            <div class="col-12 col-xl-6 inner__media">
+              <div class="media-container">
+
+                <!-- Inner Illustration Image Start -->
+                <div class="image contact-image">
+                  <!--<div class="color-layer color-layer-dark"></div>-->
+                  <!-- login image bottom caption -->
+                  <div class="image-caption opposite">
+                    <p>
+                      Access Panel
+                      <span>AADIANT / Render</span>
+                    </p>
+                  </div>
+                </div>
+                <!-- Inner Illustration Image End -->
+                
+              </div>
+            </div>
+            <!-- Inner Section Media Part End -->
+
+          </div>
+        </div>
+      </div>
+      <!-- Inner Section Content End -->
+
+    </section>
+    <!-- Login Section End -->
+
+    <!-- Register Section Start -->
+    <section id="register" class="inner contact">
+
+      <!-- Inner Section Content Start -->
+      <div class="inner__content fullheight">
+        <div class="container-fluid px-0 fullheight">
+          <div class="row gx-0 flex-xl-row-reverse fullheight">
+
+            <!-- Inner Section Info Part Start -->
+            <div class="col-12 col-xl-6 inner__info">
+              <div class="blocks-container">
+
+                <!-- Back Button -->
+                <div class="content-block">
+                  <a href="#0" id="register-back" class="text-link back-link">&larr; Back to Login</a>
+                </div>
+
+                <!-- Inner Content Block Title Start -->
+                <div class="content-block">
+                  <span class="block__subtitle">04 / Register</span>
+                  <h2 class="block__title">Create your account.</h2>
+                  <p class="block__text">Join Aadiant to start using the platform. Fill in basic details and create a secure password.</p>
+                </div>
+                <!-- Inner Content Block Title End -->
+
+                <!-- Inner Content Block Form Start -->
+                <div class="content-block">
+                  <form class="form form-light register-form" action="http://127.0.0.1:5000/register" method="POST">
+                    <div class="container-fluid px-0">
+                      <div class="row gx-5">
+                        <div class="col-12 col-md-6">
+                          <input type="text" name="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <input type="password" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <input type="password" name="password_confirm" placeholder="Confirm Password" required>
+                        </div>
+                        <div class="col-12 login-btn-wrap">
+                          <button class="btn btn-l btn-light" type="submit">
+                            <span class="btn-title">Create Account</span>
+                            <span class="btn-hover">Create Account</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- Inner Content Block Form End -->
+
+              </div>
+            </div>
+            <!-- Inner Section Info Part End -->
+
+            <!-- Inner Section Media Part Start -->
+            <div class="col-12 col-xl-6 inner__media">
+              <div class="media-container">
+
+                <!-- Inner Illustration Image Start -->
+                <div class="image contact-image">
+                  <!--<div class="color-layer color-layer-dark"></div>-->
+                  <!-- register image bottom caption -->
+                  <div class="image-caption opposite">
+                    <p>
+                      New Account
+                      <span>AADIANT / Render</span>
+                    </p>
+                  </div>
+                </div>
+                <!-- Inner Illustration Image End -->
+                
+              </div>
+            </div>
+            <!-- Inner Section Media Part End -->
+
+          </div>
+        </div>
+      </div>
+      <!-- Inner Section Content End -->
+
+    </section>
+    <!-- Register Section End -->
+
+    <!-- Footer Desktop Start -->
+    <footer id="footer" class="footer-desktop split">
+      <div class="container-fluid px-0 fullheight">
+        <div class="row gx-0 fullheight">
+          <div class="col-6 footer-desktop__left fullheight">
+            <div class="container-desktop d-flex fullheight justify-content-start align-items-center">
+              <!-- Home screen socials links -->
+              <ul class="socials">
+                <li>
+                  <a class="btn btn-s-text" href="https://twitter.com/aadiantds" target="_blank">
+                    <span class="title">X</span>
+                    <span class="hover">X</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn btn-s-text" href="https://www.youtube.com/@aadiantds" target="_blank">
+                    <span class="title">Yt</span>
+                    <span class="hover">Yt</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn btn-s-text" href="https://www.instagram.com/aadiantds" target="_blank">
+                    <span class="title">In</span>
+                    <span class="hover">In</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn btn-s-text" href="https://www.facebook.com/61582793127965" target="_blank">
+                    <span class="title">Fb</span>
+                    <span class="hover">Fb</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6 footer-desktop__right fullheight">
+            <div class="container-desktop fullheight d-flex justify-content-end align-items-center">
+              <p class="copyright bright">
+                <i class="fa-regular fa-copyright"></i>
+                <a class="contact-link" target="_blank">AADIANT</a>,
+                2025
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Desktop End -->
+
+    <!-- Notify Popup Start -->
+<div id="notify" class="popup notify">
+  <div class="popup__container">
+
+    <!-- Popup Content Start -->
+    <div class="popup__content block-rounded-s">
+
+      <!-- popup close button -->
+      <a href="#0" id="notify-close" class="popup-close">
+        <i class="fa-solid fa-xmark"></i>
+      </a>
+
+      <!-- Notify Popup Title Start -->
+      <div class="popup-title">
+        <p class="popup-title__title">Get to know about our launch</p>
+        <p class="popup-title__text">
+          Subscribe to our newsletter and we will send you a notification about the launch of our brand new site
+        </p>
+      </div>
+      <!-- Notify Popup Title End -->
+
+      <!-- Notify Form Container Start -->
+      <div class="form-container">
+
+        <!-- Reply Messages Start-->
+        <div class="reply-group subscription-ok">
+          <i class="fa-solid fa-circle-check reply-group__icon"></i>
+          <p class="reply-group__title txt-light">Done!</p>
+          <span class="reply-group__text">Thanks for subscribing. We will send you a notification about our launch.</span>
+        </div>
+        <div class="reply-group subscription-error">
+          <i class="fa-solid fa-face-frown-open reply-group__icon"></i>
+          <p class="reply-group__title">Ooops!</p>
+          <span class="reply-group__text">Something went wrong. Please try again later.</span>
+        </div>
+        <!-- Reply Messages End-->
+
+        <!-- Notify Contact Form Start-->
+        <form class="form notify-form form-light" action="https://formspree.io/f/mvgwjjgo" method="POST">
+          <input class="margin-l" type="email" name="email" placeholder="Your Email" required>
+          <button class="btn btn-l btn-light" type="submit">
+            <span class="btn-title">Submit</span>
+            <span class="btn-hover">Submit</span>
+          </button>
+        </form>
+        <!-- Notify Contact Form End-->
+
+      </div>
+      <!-- Notify Form Container End -->
+
+    </div>
+    <!-- Popup Content End -->
+
+  </div>
+</div>
+<!-- Notify Popup End -->
+
+
+    <!-- Say Hello Popup Start -->
+<div id="sayhello" class="popup sayhello">
+  <div class="popup__container">
+
+    <!-- Popup Content Start -->
+    <div class="popup__content block-rounded-s">
+
+      <!-- popup close button -->
+      <a href="#0" id="sayhello-close" class="popup-close">
+        <i class="fa-solid fa-xmark"></i>
+      </a>
+
+      <!-- Say Hello Popup Title Start -->
+      <div class="popup-title">
+        <p class="popup-title__title">Let's talk!</p>
+      </div>
+      <!-- Say Hello Popup Title End -->
+
+      <!-- Say Hello Form Container Start -->
+      <div class="form-container">
+
+        <!-- Reply Messages Start-->
+        <div class="reply-group">
+          <i class="fa-solid fa-circle-check reply-group__icon"></i>
+          <p class="reply-group__title">Done!</p>
+          <span class="reply-group__text">Thanks for your message. We will get back as soon as possible</span>
+        </div>
+        <!-- Reply Messages End-->
+
+        <!-- Contact Form Start -->
+        <form class="form form-light sayhello-form" id="sayhello-form"
+              action="https://formspree.io/f/mvgwjjgo" method="POST">
+          <div class="container-fluid px-0">
+            <div class="row gx-5">
+              <div class="col-12 col-md-6">
+                <input type="text" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-12 col-md-6">
+                <input type="email" name="email" placeholder="Your Email" required>
+              </div>
+              <div class="col-12">
+                <textarea class="margin-l" name="message" placeholder="A Few Words" required></textarea>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-l btn-light" type="submit">
+                  <span class="btn-title">Send</span>
+                  <span class="btn-hover">Send</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- Contact Form End  -->
+
+      </div>
+      <!-- Say Hello Form Container End -->
+
+    </div>
+    <!-- Popup Content End -->
+
+  </div>
+</div>
+<!-- Say Hello Popup End -->
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+      <!-- Background of PhotoSwipe.
+      It's a separate element, as animating opacity is faster than rgba(). -->
+      <div class="pswp__bg"></div>
+
+      <!-- Slides wrapper with overflow:hidden. -->
+      <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+          <div class="pswp__top-bar">
+
+            <!--  Controls are self-explanatory. Order can be changed. -->
+
+            <div class="pswp__counter"></div>
+
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+            <!-- element will get class pswp__preloader-active when preloader is running -->
+            <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+            </div>
+          </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Load Scripts Start -->
+    <script src="js/libs.min.js"></script>
+    <script src="js/gallery-init.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- Load Scripts End -->
+
+  </body>
+
+</html>
