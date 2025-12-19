@@ -573,9 +573,10 @@ $("#sayhello-form").submit(function(e) {
   // Open dashboard with token
   function openDashboard() {
     var token = localStorage.getItem('access_token');
+    var dashboardUrl = window.DASHBOARD_URL || 'http://localhost:8501';
     console.log('Opening dashboard with token (length: ' + (token ? token.length : 0) + ')');
     if (token) {
-      var dashboardUrl = 'http://localhost:8501?token=' + encodeURIComponent(token);
+      dashboardUrl = dashboardUrl + '?token=' + encodeURIComponent(token);
       console.log('Redirecting to Streamlit dashboard...');
       showInlineAlert('login', 'Redirecting to dashboard...', 'info', 2000);
       // Clear local storage token before redirect to avoid lingering credentials
