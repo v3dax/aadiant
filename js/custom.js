@@ -1,0 +1,690 @@
+// ------------------------------------------------
+// Project Name: AADIANT
+// Project Description: AADIANT
+// File name: custom.js
+// ------------------------------------------------
+
+// ------------------------------------------------
+// Table of Contents
+// ------------------------------------------------
+
+  // --------------------------------------------- //
+  // Particles for Main Intro Left (interactive)
+  // --------------------------------------------- //
+  var particlesMainLeft = $('#particles-main-left');
+  if (particlesMainLeft.length) {
+    // lightweight config with interactivity
+    particlesJS('particles-main-left', {
+      "particles": {
+        "number": {
+          "value": (window.innerWidth > 1200) ? 80 : 45,
+          "density": { "enable": true, "value_area": 700 }
+        },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.8, "random": true },
+        "size": { "value": 3.5, "random": true },
+        "line_linked": { "enable": false },
+        "move": { "enable": true, "speed": 2.2, "direction": "none", "out_mode": "out" }
+      },
+      "interactivity": {
+        "detect_on": "window",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": false, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "repulse": { "distance": 90, "duration": 0.4 },
+          "push": { "particles_nb": 6 }
+        }
+      },
+      "retina_detect": true
+    });
+  }
+//
+//  1. Loader & Loading Animation
+//  2. Typed.js Plugin Settings
+//  3. Swiper Slider
+//  4. Typed.js Plugin Settings
+//  5. Magnific Popup Video
+//  6. KBW-Countdown
+//  7. Vegas Kenburns
+//  8. Skillbars
+//  9. Mailchimp Notify Form
+//  10. Say Hello Form
+//  11. ParticlesJS Background
+//
+// ------------------------------------------------
+// Table of Contents End
+// ------------------------------------------------
+
+$(window).on("load", function() {
+   
+  "use strict";
+
+  // --------------------------------------------- //
+  // Loader & Loading Animation Start
+  // --------------------------------------------- //
+  $(".loader__logo").addClass('scaleOut');
+
+  setTimeout(function(){
+    $(".loader").addClass('loaded');
+    $("#main").addClass('active animate-in');
+    $('#home-trigger').addClass('active-link');
+  }, 300);
+ 
+  setTimeout(function(){
+    $("body").addClass('loaded');
+  }, 1400);
+  // --------------------------------------------- //
+  // Loader & Loading Animation End
+  // --------------------------------------------- //
+  
+  // --------------------------------------------- //
+  // Typed.js Plugin Settings Start
+  // --------------------------------------------- //
+  var animatedHeadline = $(".animated-headline");
+  if(animatedHeadline.length){
+    var typed = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      loop: true,
+      typeSpeed: 60,
+      backSpeed: 30,
+      backDelay: 2500
+    });
+  }
+  // --------------------------------------------- //
+  // Typed.js Plugin Settings End
+  // --------------------------------------------- //
+
+});
+
+$(function() {
+
+  "use strict";
+
+  // --------------------------------------------- //
+  // Swiper Slider Start
+  // --------------------------------------------- //
+  var swiper = new Swiper('.swiper', {
+    // Optional parameters
+    grabCursor: true,
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        //shadow: true,
+        translate: ["-20%", 0, -1],
+      },
+      next: {
+        translate: ["100%", 0, 0],
+      },
+    },
+    parallax: true,
+    speed: 1300,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+  });
+  // --------------------------------------------- //
+  // Swiper Slider End
+  // --------------------------------------------- //
+
+  // --------------------------------------------- //
+  // Magnific Popup Video Start
+  // --------------------------------------------- //
+  $('#showreel-trigger').magnificPopup({
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+    fixedContentPos: false,
+    iframe: {
+        patterns: {
+            youtube: {
+                index: 'youtube.com/',
+                id: 'v=',
+                src: 'https://www.youtube.com/embed/%id%?autoplay=1&mute=1'
+            }
+        }
+    },
+    callbacks: {
+        beforeOpen: function() { $('body').addClass('overflow-hidden'); },
+        close: function() { $('body').removeClass('overflow-hidden'); }
+    }
+});
+
+  // --------------------------------------------- //
+  // Magnific Popup Video End
+  // --------------------------------------------- //
+
+  // --------------------------------------------- //
+  // KBW-Countdown Start
+  // --------------------------------------------- //
+  $('#countdown').countdown({until: $.countdown.UTCDate(+10, 2023, 9, 9), format: 'D'});
+  // --------------------------------------------- //
+  // KBW-Countdown End
+  // --------------------------------------------- //
+
+  // --------------------------------------------- //
+  // Vegas Kenburns Start
+  // --------------------------------------------- //
+  var bgndKenburns = $('#bgndKenburns');
+  if(bgndKenburns.length){
+    bgndKenburns.vegas({
+      timer: false,
+      delay: 8000,
+      transition: 'fade2',
+      transitionDuration: 2000,
+      slides: [
+        { src: "img/backgrounds/slide_3.jpg" },
+        { src: "img/backgrounds/part.jpg" },
+        { src: "img/backgrounds/slide_1.jpg" }
+      ],
+      animation: [ 'kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight' ]
+    });
+  }
+
+  var bgndKenburnsFull = $('#bgndKenburnsFull');
+  if(bgndKenburnsFull.length){
+    bgndKenburnsFull.vegas({
+      timer: false,
+      delay: 8000,
+      transition: 'fade2',
+      transitionDuration: 2000,
+      slides: [
+        { src: "https://dummyimage.com/1920x1080/4d4d4d/636363" },
+        { src: "https://dummyimage.com/1920x1080/4d4d4d/636363" },
+        { src: "https://dummyimage.com/1920x1080/4d4d4d/636363" }
+      ],
+      animation: [ 'kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight' ]
+    });
+  }
+  // --------------------------------------------- //
+  // Vegas Kenburns End
+  // --------------------------------------------- //
+
+  // --------------------------------------------- //
+  // Skillbars Settings Start
+  // --------------------------------------------- //
+  $('.skillbar').skillBars({
+    from: 0,
+    speed: 4000,
+    interval: 100,
+  });
+  // --------------------------------------------- //
+  // Skillbars Settings End
+  // --------------------------------------------- //
+
+  // --------------------------------------------- //
+// Notify Form (Formspree) Start
+// --------------------------------------------- //
+$("#notify .notify-form").submit(function(e) {
+    e.preventDefault(); // prevent default form submission
+    var th = $(this);
+
+    $.ajax({
+        type: "POST",
+        url: "https://formspree.io/f/mvgwjjgo", // your Formspree URL
+        data: th.serialize(),
+        dataType: "json" // important
+    }).done(function() {
+        $('#notify').find('.notify-form').addClass('is-hidden');
+        $('#notify').find('.subscription-ok').addClass('is-visible');
+
+        setTimeout(function() {
+            $('#notify').find('.subscription-ok').removeClass('is-visible');
+            $('#notify').find('.notify-form').delay(300).removeClass('is-hidden');
+            th.trigger("reset");
+        }, 5000);
+    }).fail(function() {
+        $('#notify').find('.notify-form').addClass('is-hidden');
+        $('#notify').find('.subscription-error').addClass('is-visible');
+
+        setTimeout(function() {
+            $('#notify').find('.subscription-error').removeClass('is-visible');
+            $('#notify').find('.notify-form').delay(300).removeClass('is-hidden');
+            th.trigger("reset");
+        }, 5000);
+    });
+});
+
+// --------------------------------------------- //
+// Notify Form (Formspree) End
+// --------------------------------------------- //
+
+
+// --------------------------------------------- //
+// Say Hello Form with Formspree AJAX Start
+// --------------------------------------------- //
+$("#sayhello-form").submit(function(e) {
+    e.preventDefault(); // prevent default form submission
+
+    var th = $(this);
+
+    $.ajax({
+        type: "POST",
+        url: "https://formspree.io/f/mvgwjjgo", // your Formspree URL
+        data: th.serialize(),
+        dataType: "json"
+    }).done(function() {
+        // hide form and show "Done!" message
+        $('.sayhello').find('.form').addClass('is-hidden');
+        $('.sayhello').find('.reply-group').addClass('is-visible');
+
+        setTimeout(function() {
+            // reset popup after 5 seconds
+            $('.sayhello').find('.reply-group').removeClass('is-visible');
+            $('.sayhello').find('.form').delay(300).removeClass('is-hidden');
+            th.trigger("reset");
+        }, 5000);
+    }).fail(function() {
+        // show an error message in the same popup instead of alert
+        alert("Oops! Something went wrong. Please try again later.");
+    });
+});
+// --------------------------------------------- //
+// Say Hello Form with Formspree AJAX End
+// --------------------------------------------- //
+
+  // --------------------------------------------- //
+  // ParticlesJS Background Start
+  // --------------------------------------------- //
+  // Triangles BG - particlesJS
+  var bgndTriangles = $('#triangles-js');
+  if (bgndTriangles.length) {
+    particlesJS('triangles-js', {
+      "particles": {
+        "number": {
+          "value": 33,
+          "density": {
+            "enable": true,
+            "value_area": 1420.4657549380909
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "triangle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.06313181133058181,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 11.83721462448409,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 4,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  };
+  // --------------------------------------------- //
+  // ParticlesJS Background End
+  // --------------------------------------------- //
+
+  // --------------------------------------------- //
+  // Login section open (custom)
+  // Mirrors behavior of about/contact triggers so the menu opens the login inner section
+  // --------------------------------------------- //
+  var loginTrigger = $('.login-trigger'),
+      loginSection = $('#login'),
+      header = $('#header'),
+      footer = $('#footer');
+
+  loginTrigger.on('click', function(event) {
+    event.preventDefault();
+    setTimeout(function(){
+      loginSection.addClass('active animate-in');
+      loginTrigger.addClass('active-link');
+    }, 500);
+    setTimeout(function(){
+      header.addClass('inner-is-visible');
+      footer.addClass('inner-is-visible');
+    }, 1500);
+  });
+
+  // register section open (from login link)
+  var registerTrigger = $('#register-trigger'),
+      registerSection = $('#register');
+
+  registerTrigger.on('click', function(event) {
+    event.preventDefault();
+
+    // Prevent double clicks while animating
+    if (registerTrigger.data('animating')) return;
+    registerTrigger.data('animating', true);
+
+    // If login section is currently active, keep it visible and play its fade-out animation
+    if (loginSection.length && loginSection.hasClass('active')) {
+      // start fade-out of login section (it will stay until we remove the class)
+      loginSection.addClass('animate-out');
+
+      // After a short delay, bring the register section in with the same timing as other sections
+      setTimeout(function(){
+        registerSection.addClass('active animate-in');
+        registerTrigger.addClass('active-link');
+      }, 500);
+
+      // After the animations finish, remove the old login active classes so only register remains active
+      setTimeout(function(){
+        loginSection.removeClass('active animate-in animate-out');
+        // clear animating flag
+        registerTrigger.data('animating', false);
+      }, 1400);
+
+      setTimeout(function(){
+        header.addClass('inner-is-visible');
+        footer.addClass('inner-is-visible');
+      }, 1500);
+
+    } else {
+      // default behavior (when not coming from login)
+      setTimeout(function(){
+        registerSection.addClass('active animate-in');
+        registerTrigger.addClass('active-link');
+      }, 500);
+      setTimeout(function(){
+        header.addClass('inner-is-visible');
+        footer.addClass('inner-is-visible');
+        registerTrigger.data('animating', false);
+      }, 1500);
+    }
+  });
+
+  // Back from register to login
+  var registerBack = $('#register-back');
+  registerBack.on('click', function(event) {
+    event.preventDefault();
+
+    // Prevent double clicks
+    if (registerBack.data('animating')) return;
+    registerBack.data('animating', true);
+
+    // If register section is active, play its fade-out and then bring login back
+    if (registerSection.length && registerSection.hasClass('active')) {
+      registerSection.addClass('animate-out');
+
+      setTimeout(function(){
+        // show login
+        loginSection.addClass('active animate-in');
+        // ensure login trigger link becomes active (if needed)
+        loginTrigger.addClass('active-link');
+      }, 500);
+
+      // cleanup after animation
+      setTimeout(function(){
+        registerSection.removeClass('active animate-in animate-out');
+        registerBack.data('animating', false);
+      }, 1400);
+
+      setTimeout(function(){
+        header.addClass('inner-is-visible');
+        footer.addClass('inner-is-visible');
+      }, 1500);
+    } else {
+      // Fallback: open login normally
+      setTimeout(function(){
+        loginSection.addClass('active animate-in');
+        loginTrigger.addClass('active-link');
+        registerBack.data('animating', false);
+      }, 500);
+      setTimeout(function(){
+        header.addClass('inner-is-visible');
+        footer.addClass('inner-is-visible');
+      }, 1500);
+    }
+  });
+
+  // --------------------------------------------- //
+  // Auth: Login/Register AJAX to FastAPI
+  // --------------------------------------------- //
+  var BACKEND_BASE_URL = window.BACKEND_BASE_URL || 'http://127.0.0.1:8081';
+
+  // Inline alert system within sections (login/register)
+  function showInlineAlert(sectionId, msg, type = 'info', duration = 6000) {
+    var container = $('#' + sectionId + '-alert');
+    if (!container.length) {
+      console.warn('Alert container not found for section:', sectionId);
+      return;
+    }
+    container.removeClass('success error info hidden');
+    container.addClass(type);
+    container.find('.ui-alert-text').text(msg);
+    container.fadeIn(200);
+
+    // Auto-hide
+    setTimeout(function(){
+      container.fadeOut(200, function(){
+        container.addClass('hidden');
+      });
+    }, duration);
+  }
+
+  // Persist tokens
+  function storeTokens(data) {
+    if (data && data.access_token) {
+      localStorage.setItem('access_token', data.access_token);
+      console.log('Token stored (length: ' + data.access_token.length + ')');
+    }
+    // Do NOT persist refresh_token in localStorage for security
+  }
+
+  // Open dashboard with token
+  function openDashboard() {
+    var token = localStorage.getItem('access_token');
+    console.log('Opening dashboard with token (length: ' + (token ? token.length : 0) + ')');
+    if (token) {
+      var dashboardUrl = 'http://localhost:8501?token=' + encodeURIComponent(token);
+      console.log('Redirecting to Streamlit dashboard...');
+      showInlineAlert('login', 'Redirecting to dashboard...', 'info', 2000);
+      // Clear local storage token before redirect to avoid lingering credentials
+      try { localStorage.removeItem('access_token'); } catch (e) {}
+      // Use assign for robust navigation; if it fails, try replace/open
+      try {
+        window.location.assign(dashboardUrl);
+      } catch (e1) {
+        try { window.location.replace(dashboardUrl); } catch (e2) {
+          window.open(dashboardUrl, '_self');
+        }
+      }
+    } else {
+      console.error('No token found in localStorage');
+      showInlineAlert('login', 'Error: No token found. Please try logging in again.', 'error');
+    }
+  }
+
+  // Login handler
+  $(document).on('submit', '.login-form', async function(e) {
+    e.preventDefault();
+    var form = $(this);
+    var email = form.find('input[name="email"]').val();
+    var password = form.find('input[name="password"]').val();
+
+    console.log('Login attempt for:', email);
+
+    try {
+      var res = await fetch(BACKEND_BASE_URL + '/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, password: password })
+      });
+      
+      console.log('Login response status:', res.status);
+      
+      if (!res.ok) {
+        var err = await res.json().catch(function(){ return {}; });
+        console.error('Login error:', err);
+        throw new Error(err.detail || 'Login failed');
+      }
+      
+      var data = await res.json();
+      console.log('Login successful, received token');
+      storeTokens(data);
+      
+      showInlineAlert('login', 'Logged in successfully! Redirecting...', 'success', 3000);
+      setTimeout(function() {
+        openDashboard();
+      }, 500);
+    } catch (err) {
+      console.error('Login exception:', err);
+      showInlineAlert('login', err.message || 'Login failed', 'error');
+    }
+  });
+
+  // Register handler
+  $(document).on('submit', '.register-form', async function(e) {
+    e.preventDefault();
+    var form = $(this);
+    var full_name = form.find('input[name="full_name"]').val();
+    var email = form.find('input[name="email"]').val();
+    var password = form.find('input[name="password"]').val();
+    var password_confirm = form.find('input[name="password_confirm"]').val();
+
+    console.log('Register attempt for:', email);
+
+    if (password !== password_confirm) {
+      showInlineAlert('register', 'Passwords do not match', 'error');
+      return;
+    }
+
+    try {
+      var res = await fetch(BACKEND_BASE_URL + '/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, password: password, full_name: full_name })
+      });
+      
+      console.log('Register response status:', res.status);
+      
+      if (!res.ok) {
+        var err = await res.json().catch(function(){ return {}; });
+        console.error('Register error:', err);
+        throw new Error(err.detail || 'Registration failed');
+      }
+      
+      var data = await res.json();
+      console.log('Registration successful');
+      // Do NOT redirect to dashboard on registration.
+      // Instead, navigate back to the login section so the user can log in.
+      showInlineAlert('register', 'Account created! Please log in to continue.', 'success', 3000);
+      // Delay 1.5s so the success alert is visible before navigating back to login
+      setTimeout(function(){
+        try {
+          $('#register-back').trigger('click');
+        } catch (e) {
+          console.warn('Could not trigger register-back; ensuring login section is visible');
+          // Fallback: directly open login section
+          var loginSection = $('#login');
+          if (loginSection.length) {
+            loginSection.addClass('active animate-in');
+          }
+        }
+      }, 1500);
+    } catch (err) {
+      console.error('Register exception:', err);
+      showInlineAlert('register', err.message || 'Registration failed', 'error');
+    }
+  });
+
+});

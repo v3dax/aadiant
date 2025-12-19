@@ -1,0 +1,11 @@
+{
+  "name": "AADIANT.com",
+  "short_name": "AADIANT",
+  "icons": [
+    { "src": "/img/logo.png", "type": "image/png", "sizes": "1080x1080" },
+    { "src": "/img/logo.png", "type": "image/png", "sizes": "1080x1080" }
+  ],
+  "theme_color": "#efefef",
+  "background_color": "#efefef",
+  "display": "standalone"
+}
