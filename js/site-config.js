@@ -9,7 +9,7 @@
 
   // Dashboard (Streamlit) URL
   var DEFAULT_DASHBOARD_LOCAL = 'http://localhost:8501';
-  var PUBLIC_DASHBOARD = DEFAULT_DASHBOARD_LOCAL; // Update after Streamlit is deployed (e.g., 'https://aadiant-dashboard.onrender.com')
+  var PUBLIC_DASHBOARD = 'https://aadiant-dashboard.onrender.com'; // Update after Streamlit is deployed (e.g., 'https://aadiant-dashboard.onrender.com')
 
   window.BACKEND_BASE_URL = PUBLIC_BACKEND || DEFAULT_BACKEND_LOCAL;
   window.DASHBOARD_URL = PUBLIC_DASHBOARD || DEFAULT_DASHBOARD_LOCAL;
